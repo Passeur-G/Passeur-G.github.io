@@ -32,9 +32,6 @@ dependencies:
   http-proxy-middleware:
     specifier: ^2.0.6
     version: 2.0.6
-  vuepress-plugin-go-top:
-    specifier: ^1.0.4
-    version: 1.0.4
   vuepress-plugin-meting2:
     specifier: ^1.4.1
     version: 1.4.1
@@ -6138,10 +6135,6 @@ packages:
       - '@vue/composition-api'
       - typescript
     dev: true
-
-  /vuepress-plugin-go-top@1.0.4:
-    resolution: {integrity: sha512-VxYrZmvC9agXVOEzy1G7mJj23p17O7CVmcXhlaFtQ+J827OcIqNC1X646/gOI8Hfn8or17+J+8/Bg0ZSRyizEA==, tarball: https://registry.npmmirror.com/vuepress-plugin-go-top/-/vuepress-plugin-go-top-1.0.4.tgz}
-    dev: false
 
   /vuepress-plugin-md-enhance@2.0.0-rc.26(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.1.1)(vuepress@2.0.0-rc.8):
     resolution: {integrity: sha512-d/1f3jYA94B06fuFBqu3K9LUft9HJou10v/7tnd3YDOKI1Vr1I7V/us/ubAKyeq6+Zn4m51CVxrPw2OI6I+gCA==, tarball: https://registry.npmmirror.com/vuepress-plugin-md-enhance/-/vuepress-plugin-md-enhance-2.0.0-rc.26.tgz}
