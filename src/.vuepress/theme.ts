@@ -1,59 +1,64 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-import { MR_HOPE_AVATAR } from "./logo.js";
+import { getDirname, path } from "@vuepress/utils";
 
+const __dirname = getDirname(import.meta.url);
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://nulizongyouhuibao.space",//部署的域名
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Haitong Gao",//博主 名称
+    url: "https://mister-hope.com",//博主 网站 文章页作者处的链接
+    email: "ght139439@queueMicrotask.com",//博主 email
   },
 
-  iconAssets: "fontawesome-with-brands",
+  pageInfo: ['Author', 'Date', 'Original', 'Word', 'ReadingTime', 'PageView', 'Category', 'Tag'],//文章属性：作者、日期...
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  //iconPrefix: "", //图标前缀用于，简化图标输入 参考文档
+  //print: false,//打印按钮
+  //pure: ture,//纯净模式
+  //fullscreen: true,//全屏模式
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  iconAssets: "fontawesome-with-brands",//图标支持库
 
-  docsDir: "src",
+  logo: "/assets/icon/logo.png",//导航栏logo图标
+
+  logoDark: "/assets/icon/darklogo.png", //黑夜模式导航栏logo
+
+  repo: "Passeur-G",//仓库配置，用于在导航栏中显示仓库链接 github图标链接
+  
+  //hotReload: true, //开发模式下是否启动热更新，显示所有更改并重新渲染
+
+  docsDir: "src",//文档在仓库中的目录
+
+  darkmode : "toggle", //在深色模式和浅色模式之间切换 
+
+  // 页面元数据：贡献者，最后修改时间，编辑链接
+  contributors: true,
+  lastUpdated: true,
+  editLink: false,
+
+  breadcrumb: true, //路径导航
+  breadcrumbIcon : true, //路径导航图标
+  
+  
 
   blog: {
     medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
-      Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
-      Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
-      Zhihu: "https://example.com",
-      MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
+
+      BiliBili: "https://space.bilibili.com/3461572416506787?spm_id_from=333.337.0.0",//myB站个人主页
+      Gitee: "https://gitee.com/explore",
+      GitHub: "https://github.com/",
+      Gitlab: "https://gitlab.com/explore",
+      Kuwo: "https://kuwo.cn/",//酷我音乐
+      HuaBan:"https://huaban.com/materials",//花瓣素材网
+      DuiTang:"https://www.duitang.com/category/?cat=wallpaper",//堆糖素材网
+      
+
     },
+    avatar:"/assets/icon/avatar1.png",//博主头像
+    //roundAvatar: true,//头像切割成圆形
   },
 
   locales: {
@@ -64,12 +69,12 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Default footer",
-
+      footer: "Powered by <a href=\"https://v2.vuepress.vuejs.org/zh/\" target=\"_blank\"> VuePress </a> | Theme <a href=\"https://theme-hope.vuejs.press/zh/\" target=\"_blank\"> Hope </a>",
+      copyright: 'Copyright © 2024 - present Passeur',
       displayFooter: true,
 
       blog: {
-        description: "A FrontEnd programmer",
+        description: "Bachelor of Software Engineering",
         intro: "/intro.html",
       },
 
@@ -88,12 +93,12 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
-
+      footer: "Powered by <a href=\"https://v2.vuepress.vuejs.org/zh/\" target=\"_blank\"> VuePress </a> | Theme <a href=\"https://theme-hope.vuejs.press/zh/\" target=\"_blank\"> Hope </a>",
+      copyright: 'Copyright © 2024 - present Passeur <center><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv" style=\'display:none\'>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 </span> <span id="busuanzi_container_site_uv" style=\'display:none\'> | 本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 <span id="busuanzi_container_page_pv" style=\'display:none\'> | 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</center>',
       displayFooter: true,
 
       blog: {
-        description: "一个前端开发者",
+        description: "软件工程在读学士",
         intro: "/zh/intro.html",
       },
 
@@ -102,6 +107,12 @@ export default hopeTheme({
         editLink: "在 GitHub 上编辑此页",
       },
     },
+  },
+
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Language", "Repo", "Outlook", "Search"],
   },
 
   encrypt: {
@@ -117,6 +128,8 @@ export default hopeTheme({
   plugins: {
     blog: true,
 
+    
+
     // install @waline/client before enabling it
     // WARNING: This is a test server for demo only.
     // You should create and use your own comment service in production.
@@ -131,16 +144,16 @@ export default hopeTheme({
 
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
-      align: true,
-      attrs: true,
-      codetabs: true,
-      component: true,
-      demo: true,
-      figure: true,
-      imgLazyload: true,
-      imgSize: true,
-      include: true,
-      mark: true,
+      align: true, //是否启用自定义对齐格式支持
+      attrs: true, //是否启用自定义属性支持
+      codetabs: true, //是否启用代码组
+      component: true, //是否启用组件支持
+      demo: true, //是否启用代码案例支持
+      figure: true, //是否启用图片 Figure 支持
+      imgLazyload: true, //是否使用原生方式懒加载页面图片
+      imgSize: true, //是否启用图片尺寸支持
+      include: true, //是否启用 Markdown 导入支持。你可以传入一个函数进行路径解析
+      mark: true, //是否启用标记格式支持
       stylize: [
         {
           matcher: "Recommended",
@@ -153,52 +166,83 @@ export default hopeTheme({
               };
           },
         },
-      ],
-      sub: true,
-      sup: true,
-      tabs: true,
-      vPre: true,
+      ], //对行内语法进行样式化以创建代码片段
+      sub:  true, //是否启用下角标格式支持
+      sup:  true, //是否启用上角标格式支持
+      tabs: true, //是否启用选项卡
+      vPre: true, //是否启用 v-pre 容器
+      hint: true, //是否启用提示容器支持
+      // linkify: false, //是否将文字中的链接格式文字转换为链接
+
+      // alert: false, //是否启用 GFM 警告
+
+      // footnpte: false, //是否启用脚注格式支持
+
+      // imgMark: false, //是否启用图片标注支持
+
+      // obsidianImgSize: false, //是否启用 obsidian 图片尺寸支持
+
+      // tasklist: false, //是否启用任务列表格式支持。你可以传入一个对象作为任务列表的配置选项
+      
+      // checkLinks: { status: "dev" }, //是否启用链接检查
+
+      // breaks: false, //是否将段落中的 \n 转换为 <br>
+
+      // delay: 800, //操作页面 DOM 的延时，单位 ms
+
+      // locales: //Markdown 增强插件的国际化配置
 
       // install chart.js before enabling it
+      // 是否启用图表支持
       // chart: true,
 
       // insert component easily
 
       // install echarts before enabling it
+      // 是否启用 ECharts 图表支持
       // echarts: true,
 
       // install flowchart.ts before enabling it
+      // 是否启用流程图支持
       // flowchart: true,
 
-      // gfm requires mathjax-full to provide tex support
+      // gfm requires mathjax-full to provide tex support 是否支持完整的 GFM 语法
       // gfm: true,
 
       // install katex before enabling it
+      // 是否通过 KaTeX 启用 
+      // 语法支持。你可以传入一个对象作为 KaTeX 的配置选项。
+      // 特别地，你可以通过 katex.copy: true 和 katex.mhchem: true 来启用 copy 和 mhchem 扩展
       // katex: true,
 
       // install mathjax-full before enabling it
+      // 是否通过 Math Jax 启用语法支持。你可以传递一个对象来配置 Math Jax
       // mathjax: true,
 
       // install mermaid before enabling it
+      // 是否启用 Mermaid 支持，你可以传入一个对象作为 Mermaid 的配置选项
       // mermaid: true,
 
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
+       playground: {
+          presets: ["ts", "vue"],
+       }, //交互演示选项
 
       // install reveal.js before enabling it
       // revealJs: {
       //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
+      // }, //是否启用幻灯片支持。你可以传递选项控制导入的插件和主题
 
       // install @vue/repl before enabling it
-      // vuePlayground: true,
+      // vuePlayground: true, //是否启用 Vue 交互演示支持
 
       // install sandpack-vue3 before enabling it
-      // sandpack: true,
+      // sandpack: true, //是否启用 Sandpack 交互演示支持
+
+      
+    
     },
 
-    // install @vuepress/plugin-pwa and uncomment these if you want a PWA
+    // install vuepress-plugin-pwa2 and uncomment these if you want a PWA
     // pwa: {
     //   favicon: "/favicon.ico",
     //   cacheHTML: true,
@@ -255,4 +299,4 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+},{custom:true});
