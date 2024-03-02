@@ -5,6 +5,8 @@ import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
+import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
+import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
 import metingPlugin  from "vuepress-plugin-meting2";
 //import { shikiPlugin } from "@vuepress/plugin-shiki";
 const __dirname = getDirname(import.meta.url);
@@ -85,17 +87,17 @@ export default defineUserConfig({
   //     mid: "851947617",
   //   },
   // }),
-  // 背景插件
-  //canvasPlugin({
-  // type: CanvasPluginType.Figure,
-  // ribbonOption: {
-  //   zIndex: 1,
-  //   alpha: 0.8,
-  //   size: 90,
-  // },
-  //}),
+  //背景插件
+  canvasPlugin({
+    type: CanvasPluginType.Figure,
+    ribbonOption: {
+    zIndex: 1,
+    alpha: 0.8,
+    size: 90,
+  },
+  }),
   // 遮罩插件
-  //gradientCoverPlugin({}),
+    gradientCoverPlugin({}),
   // 鼠标特效插件
   popperPlugin({
     config: {
@@ -110,6 +112,10 @@ export default defineUserConfig({
     "@theme-hope/modules/blog/components/BlogHero": path.resolve(
       __dirname,
       "./components/BlogHero.vue",
+    ),
+    "@theme-hope/components/PageFooter": path.resolve(
+      __dirname,
+      "./theme/components/PageFooter.vue"
     ),
   },
   // Enable it with pwa

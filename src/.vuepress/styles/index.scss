@@ -1,1 +1,33 @@
-// place your custom styles here
+// place your custom styles her
+@use "@sass-palette/hope-config";
+.vp-blog-hero.fullscreen {
+  z-index: 2;
+}
+.blog-page-wrapper {
+  z-index: 2;
+}
+
+.theme-container .vp-sidebar {
+    transition: 0.3s;
+    top: var(--navbar-height);
+    @media (min-width: hope-config.$pad) {
+      z-index: 4;
+      background-color: transparent;
+    }
+  }
+// .hide-navbar {
+//   .sidebar {
+//     top: 0;
+//   }
+//   .toggle-sidebar-wrapper {
+//     top: 0;
+//   }
+// }
+#main-content.vp-page {
+  backdrop-filter: saturate(150%) blur(0.75rem);
+  z-index: 2;
+}
+#main-content.vp-project-home {
+  z-index: 2;
+  backdrop-filter: saturate(150%) blur(0.5rem);
+}

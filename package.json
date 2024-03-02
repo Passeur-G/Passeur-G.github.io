@@ -40,6 +40,7 @@
     "deepmerge-ts": "^5.1.0",
     "hls.js": "^1.5.7",
     "http-proxy-middleware": "^2.0.6",
+    "vue-router": "^4.3.0",
     "vuepress-plugin-meting2": "^1.4.1",
     "vuepress-plugin-oh-my-live2d": "0.7.1",
     "vuepress-shared": "2.0.0-rc.27"
