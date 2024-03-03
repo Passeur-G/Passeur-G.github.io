@@ -2,8 +2,14 @@ import { onMounted } from "vue";
 import { defineClientConfig } from "vuepress/client";
 import "vuepress-theme-hope/presets/bounce-icon.scss";
 import packageJson from '../../package.json';
+import Layout from "./theme/layouts/Layout.vue";
+import NotFound from "./theme/layouts/NotFound.vue";
 export default defineClientConfig({
   //你可以在这里覆盖或新增布局
+  layouts: {
+    Layout,
+    NotFound,
+  },
   setup: () => {
     onMounted(() => {
       console.log(

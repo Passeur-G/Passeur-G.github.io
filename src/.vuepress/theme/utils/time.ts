@@ -3,7 +3,7 @@ export const show_runtime = (): void => {
   window.setTimeout(show_runtime, 1000);
   const longtime = calculateTimePassed(startTime);
   const el = document.getElementById("runtime_span");
-  el && (el.innerHTML = `小破站已萌萌哒运行: ${longtime}`);
+  el && (el.innerHTML = `小站在互联网上飘荡: ${longtime}`);
 };
 
 const isLeapYear = (year: number): boolean => {

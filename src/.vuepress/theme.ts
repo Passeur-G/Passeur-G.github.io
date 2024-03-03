@@ -7,6 +7,8 @@ const __dirname = getDirname(import.meta.url);
 export default hopeTheme({
   hostname: "https://nulizongyouhuibao.space",//部署的域名
 
+  favicon:"/assets/icon/darklogo.png",
+
   author: {
     name: "Haitong Gao",//博主 名称
     url: "https://mister-hope.com",//博主 网站 文章页作者处的链接
@@ -49,7 +51,7 @@ export default hopeTheme({
 
       BiliBili: "https://space.bilibili.com/3461572416506787?spm_id_from=333.337.0.0",//myB站个人主页
       Gitee: "https://gitee.com/explore",
-      GitHub: "https://github.com/",
+      GitHub: "https://github.com/Passeur-G",
       Gitlab: "https://gitlab.com/explore",
       Kuwo: "https://kuwo.cn/",//酷我音乐
       HuaBan:"https://huaban.com/materials",//花瓣素材网
@@ -71,7 +73,7 @@ export default hopeTheme({
 
       footer: "Powered by <a href=\"https://v2.vuepress.vuejs.org/zh/\" target=\"_blank\"> VuePress </a> | Theme <a href=\"https://theme-hope.vuejs.press/zh/\" target=\"_blank\"> Hope </a>",
       copyright: 'Copyright © 2024 - present Passeur',
-      displayFooter: true,
+      displayFooter: false,
 
       blog: {
         description: "Bachelor of Software Engineering",
@@ -94,8 +96,8 @@ export default hopeTheme({
       sidebar: zhSidebar,
 
       footer: "Powered by <a href=\"https://v2.vuepress.vuejs.org/zh/\" target=\"_blank\"> VuePress </a> | Theme <a href=\"https://theme-hope.vuejs.press/zh/\" target=\"_blank\"> Hope </a>",
-      copyright: 'Copyright © 2024 - present Passeur <center><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv" style=\'display:none\'>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 </span> <span id="busuanzi_container_site_uv" style=\'display:none\'> | 本站访客数 <span id="busuanzi_value_site_uv"></span> 人次 <span id="busuanzi_container_page_pv" style=\'display:none\'> | 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</center>',
-      displayFooter: true,
+      copyright: '',
+      displayFooter: false,
 
       blog: {
         description: "软件工程在读学士",
