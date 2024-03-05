@@ -1,12 +1,13 @@
 import { defineUserConfig } from "vuepress";
 //import { ohmylive2dPlugin } from 'vuepress-plugin-oh-my-live2d';
-import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
+//import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
+import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
 import metingPlugin  from "vuepress-plugin-meting2";
 //import { shikiPlugin } from "@vuepress/plugin-shiki";
 const __dirname = getDirname(import.meta.url);
@@ -98,6 +99,8 @@ export default defineUserConfig({
   }),
   // 遮罩插件
     gradientCoverPlugin({}),
+  //一言插件
+  hitokotoPlugin({}),
   // 鼠标特效插件
   popperPlugin({
     config: {

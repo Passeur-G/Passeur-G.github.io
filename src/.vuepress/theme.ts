@@ -139,6 +139,40 @@ export default hopeTheme({
     //   provider: "Waline",
     //   serverURL: "https://waline-comment.vuejs.press",
     // },
+    comment: {
+      provider: "Waline",
+      serverURL: "https://talk.nulizongyouhuibao.space/", // your server url https://waline-ei4xxxyay-passeur-gs-projects.vercel.app/
+      reaction: true,
+      requiredMeta: ["nick"],
+      wordLimit: 300,
+      emoji: [
+        "https://unpkg.com/@waline/emojis@1.1.0/tieba",
+        "https://unpkg.com/@waline/emojis@1.1.0/weibo",
+        "https://emoji.shojo.cn/bili/webp/tv_小电视_动图",
+        "https://emoji.shojo.cn/bili/webp/罗小黑战记",
+        "https://emoji.shojo.cn/bili/webp/2233娘",
+        "https://emoji.shojo.cn/bili/webp/装扮小姐姐梦幻冬季",
+        "https://emoji.shojo.cn/bili/webp/装扮小姐姐·秋日午后",
+        "https://emoji.shojo.cn/bili/webp/星尘",
+        "https://emoji.shojo.cn/bili/webp/池年"
+      ],
+      locales: {
+        "/": {
+          placeholder:
+            "Welcome message ~ _≧∇≦ fill in the usual mailbox can quickly receive a reply notice ~",
+        },
+        "/zh/": {
+          placeholder:
+            "欢迎留言~ _(≧∇≦」∠)_ (填写常用邮箱即可快速收到回复通知~)",
+        }
+      },
+    },
+    prismjs: false,
+    copyright: {
+      author: "Oragekk",
+      license: "CC BY-NC-SA 4.0",
+      global: true,
+    },
 
     components: {
       components: ["Badge", "VPCard"],

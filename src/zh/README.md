@@ -38,5 +38,9 @@ projects:
     desc: 自定义详细介绍
     link: https://你的自定义链接
 
-footer: 自定义你的页脚文字
+footer: |-
+  <a href="http://beian.miit.gov.cn/" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">
+    <img src="http://www.beian.gov.cn/img/ghs.png" alt="" style="width:1rem;vertical-align:middle;"> 吉ICP备 2023003350号
+  </a>
+  <br>
 ---

@@ -39,8 +39,8 @@ dependencies:
     specifier: ^1.4.1
     version: 1.4.1
   vuepress-plugin-oh-my-live2d:
-    specifier: 0.7.1
-    version: 0.7.1
+    specifier: 0.8.0
+    version: 0.8.0(vuepress@2.0.0-rc.8)
   vuepress-shared:
     specifier: 2.0.0-rc.27
     version: 2.0.0-rc.27(vuepress@2.0.0-rc.8)
@@ -94,6 +94,9 @@ devDependencies:
   vuepress-plugin-append-date:
     specifier: 2.0.0-rc.25
     version: 2.0.0-rc.25(@vuepress/plugin-git@2.0.0-rc.15)(vuepress@2.0.0-rc.8)
+  vuepress-plugin-comment2:
+    specifier: 2.0.0-rc.25
+    version: 2.0.0-rc.25(@waline/client@3.1.2)(sass-loader@14.1.1)(vuepress@2.0.0-rc.8)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.26
     version: 2.0.0-rc.26(@vuepress/plugin-docsearch@2.0.0-rc.15)(@vuepress/plugin-feed@2.0.0-rc.15)(@vuepress/plugin-pwa@2.0.0-rc.16)(@waline/client@3.1.2)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.1.1)(vuepress@2.0.0-rc.8)
@@ -5077,8 +5080,8 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /oh-my-live2d@0.7.1:
-    resolution: {integrity: sha512-o0Ddx/QCP98YbPrdSmrhvYKQGd7vHMCnKMXOfmcNgqA71hB8kZ7AK62N/Pl714y3sGRJ8V55Pr3tn0I+M89BOg==, tarball: https://registry.npmmirror.com/oh-my-live2d/-/oh-my-live2d-0.7.1.tgz}
+  /oh-my-live2d@0.8.0:
+    resolution: {integrity: sha512-5L/Nxfwyq167raIgBT0Er7fcoFqpWEBjwopbKt4Huaw6ejHv5PfRRddmZgmST/QrqP/yNKAU3E1UxXnykN+40Q==, tarball: https://registry.npmmirror.com/oh-my-live2d/-/oh-my-live2d-0.8.0.tgz}
     dev: false
 
   /once@1.4.0:
@@ -6062,6 +6065,38 @@ packages:
       - typescript
     dev: true
 
+  /vuepress-plugin-comment2@2.0.0-rc.25(@waline/client@3.1.2)(sass-loader@14.1.1)(vuepress@2.0.0-rc.8):
+    resolution: {integrity: sha512-mLqsCJLHxDnVdRuRdgFIgO7eCKEk01NiTAXy23y261xxlrQkY0VALE1UtE58ikyOgPAfiPWzwQkQLqQ45Hzfaw==, tarball: https://registry.npmmirror.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-rc.25.tgz}
+    engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
+    peerDependencies:
+      '@waline/client': ^3.1.0
+      artalk: ^2.7.3
+      sass-loader: ^14.0.0
+      twikoo: ^1.5.0
+      vuepress: 2.0.0-rc.8
+    peerDependenciesMeta:
+      '@waline/client':
+        optional: true
+      artalk:
+        optional: true
+      sass-loader:
+        optional: true
+      twikoo:
+        optional: true
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.15(vuepress@2.0.0-rc.8)
+      '@waline/client': 3.1.2
+      giscus: 1.5.0
+      sass-loader: 14.1.1
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
+      vuepress-plugin-sass-palette: 2.0.0-rc.25(sass-loader@14.1.1)(vuepress@2.0.0-rc.8)
+      vuepress-shared: 2.0.0-rc.25(vuepress@2.0.0-rc.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: true
+
   /vuepress-plugin-comment2@2.0.0-rc.26(@waline/client@3.1.2)(sass-loader@14.1.1)(vuepress@2.0.0-rc.8):
     resolution: {integrity: sha512-Nyre7SLqzFdJ+cVqvUHttHn5EeO/ey0csdaMJBzjGkWF4h8raUPEHtjDaJPuMRgDYgOJGzTuT+WI1Bo82Xwr/Q==, tarball: https://registry.npmmirror.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-rc.26.tgz}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
@@ -6242,11 +6277,38 @@ packages:
       hls.js: 1.5.7
     dev: false
 
-  /vuepress-plugin-oh-my-live2d@0.7.1:
-    resolution: {integrity: sha512-Hh39R9e1ia9zsm/0EmF2NMNBTZgPkaej7y+oyxmXBQNePuyFmhjsQgAlHugBGEiGB9lX8cGLBBpPaSMIOrWLng==, tarball: https://registry.npmmirror.com/vuepress-plugin-oh-my-live2d/-/vuepress-plugin-oh-my-live2d-0.7.1.tgz}
+  /vuepress-plugin-oh-my-live2d@0.8.0(vuepress@2.0.0-rc.8):
+    resolution: {integrity: sha512-xIJRXl5i/akJtyp9bNpCiwbfp7te/CJ7oACE/GNrd0gDKZarww+i5VDz62G8r2VaZruD2s4ioEGWVjA/W3x5Lw==, tarball: https://registry.npmmirror.com/vuepress-plugin-oh-my-live2d/-/vuepress-plugin-oh-my-live2d-0.8.0.tgz}
+    peerDependencies:
+      vuepress: ^2.0.0-rc.8
     dependencies:
-      oh-my-live2d: 0.7.1
+      oh-my-live2d: 0.8.0
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
+    transitivePeerDependencies:
+      - typescript
     dev: false
+
+  /vuepress-plugin-sass-palette@2.0.0-rc.25(sass-loader@14.1.1)(vuepress@2.0.0-rc.8):
+    resolution: {integrity: sha512-T4F0ODl27ZxxiGUjRTqL0AAiwqCcOVMnGQdXBhs5NIKHV3BL+O46jJCh2Hyi4BSiOkovfZ1Npazg+03135LJOA==, tarball: https://registry.npmmirror.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-rc.25.tgz}
+    engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
+    peerDependencies:
+      sass-loader: ^14.0.0
+      vuepress: 2.0.0-rc.8
+    peerDependenciesMeta:
+      sass-loader:
+        optional: true
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.15(vuepress@2.0.0-rc.8)
+      chokidar: 3.6.0
+      sass: 1.71.1
+      sass-loader: 14.1.1
+      vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
+      vuepress-shared: 2.0.0-rc.25(vuepress@2.0.0-rc.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: true
 
   /vuepress-plugin-sass-palette@2.0.0-rc.26(sass-loader@14.1.1)(vuepress@2.0.0-rc.8):
     resolution: {integrity: sha512-CAwcSyXMqZMCimrL65z9xiQBOstd6oZmmOaR21TDJOKp+StiPHTqHGFrSfN+uv/dNnSg1XKBIXCdQMUd8bDsUg==, tarball: https://registry.npmmirror.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-rc.26.tgz}

@@ -31,3 +31,13 @@
   z-index: 2;
   backdrop-filter: saturate(150%) blur(0.5rem);
 }
+//品如字体
+@font-face {
+  font-family: "PRshouxie";
+  src: url("https://cdn.jsdelivr.net/gh/oragekk/blog-assets/font/8d6a7466947745f9f211cd17e0ed5dc3.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/oragekk/blog-assets/font/8d6a7466947745f9f211cd17e0ed5dc3.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
