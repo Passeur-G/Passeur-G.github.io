@@ -113,7 +113,7 @@ export default defineUserConfig({
   // 搜索插件
   docsearchPlugin({
     appId: "150XP8FDHT",
-    apiKey: "0b3ad76991fc9da45821e185c5f6cd9d",
+    apiKey: "a816afc935fb6dc08c54a0e66b0ee529",
     indexName: "nulizongyouhuibao",
     locales: {
       "/zh/": {
