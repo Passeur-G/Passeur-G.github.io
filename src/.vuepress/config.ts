@@ -5,6 +5,7 @@ import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
 import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
@@ -107,6 +108,55 @@ export default defineUserConfig({
       shape: PopperShape.Star,
       size: 1.95,
       numParticles: 8,
+    },
+  }),
+  // 搜索插件
+  docsearchPlugin({
+    appId: "150XP8FDHT",
+    apiKey: "0b3ad76991fc9da45821e185c5f6cd9d",
+    indexName: "nulizongyouhuibao",
+    locales: {
+      "/zh/": {
+        placeholder: "搜索内容",
+        translations: {
+          button: {
+            buttonText: "搜索",
+            buttonAriaLabel: "搜索",
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: "清除查询条件",
+              resetButtonAriaLabel: "清除查询条件",
+              cancelButtonText: "取消",
+              cancelButtonAriaLabel: "取消",
+            },
+            startScreen: {
+              recentSearchesTitle: "搜索历史",
+              noRecentSearchesText: "没有搜索历史",
+              saveRecentSearchButtonTitle: "保存至搜索历史",
+              removeRecentSearchButtonTitle: "从搜索历史中移除",
+              favoriteSearchesTitle: "收藏",
+              removeFavoriteSearchButtonTitle: "从收藏中移除",
+            },
+            errorScreen: {
+              titleText: "无法获取结果",
+              helpText: "你可能需要检查你的网络连接",
+            },
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+              searchByText: "搜索提供者",
+            },
+            noResultsScreen: {
+              noResultsText: "无法找到相关结果",
+              suggestedQueryText: "你可以尝试查询",
+              reportMissingResultsText: "你认为该查询应该有结果？",
+              reportMissingResultsLinkText: "点击反馈",
+            },
+          },
+        },
+      },
     },
   }),
   ],
