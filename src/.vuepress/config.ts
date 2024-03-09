@@ -7,8 +7,10 @@ import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
 import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
+import { shikiPlugin } from "@vuepress/plugin-shiki";
 import metingPlugin  from "vuepress-plugin-meting2";
 //import { shikiPlugin } from "@vuepress/plugin-shiki";
 const __dirname = getDirname(import.meta.url);
@@ -80,15 +82,15 @@ export default defineUserConfig({
   //       ],
   //     }),
   // ],
-  // metingPlugin({
-  //   metingOptions: {
-  //     global:true, // 开启关闭全局播放器
-  //     server: "tencent",
-  //     api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
-  //     type: "playlist",
-  //     mid: "851947617",
-  //   },
-  // }),
+  metingPlugin({
+    metingOptions: {
+      global:true, // 开启关闭全局播放器
+      server: "netease",
+      api: "https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r",
+      type: "playlist",
+      mid: "2465726847",
+    },
+  }),
   //背景插件
   canvasPlugin({
     type: CanvasPluginType.Figure,
@@ -98,10 +100,20 @@ export default defineUserConfig({
     size: 90,
   },
   }),
+  // 代码高亮
+  shikiPlugin({
+    theme: "one-dark-pro",
+  }),
   // 遮罩插件
-    gradientCoverPlugin({}),
+  gradientCoverPlugin({}),
   //一言插件
   hitokotoPlugin({}),
+  // 谷歌统计
+  googleAnalyticsPlugin({
+    // 配置项
+    id: "G-QK8NZREDW4",
+    debug: true,
+  }),
   // 鼠标特效插件
   popperPlugin({
     config: {
@@ -212,6 +224,6 @@ export default defineUserConfig({
       "./theme/components/PageFooter.vue"
     ),
   },
-  // Enable it with pwa
-  // shouldPrefetch: false,
+  // Enable it with pwa 启动pwa
+  shouldPrefetch: false,
 });

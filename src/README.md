@@ -4,7 +4,7 @@ layout: BlogHome
 icon: home
 title: Passeur's Blog
 heroImage: /assets/icon/logo2.png
-heroText: The name of your blog
+heroText: false
 tagline: You can put your slogan here
 heroFullScreen: true
 projects:
