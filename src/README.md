@@ -5,18 +5,18 @@ icon: home
 title: Passeur's Blog
 heroImage: /assets/icon/logo2.png
 heroText: false
-tagline: You can put your slogan here
+tagline: true
 heroFullScreen: true
 projects:
   - icon: project
-    name: project name
-    desc: project detailed description
+    name: Item collection
+    desc: Open source project practice set
     link: https://your.project.link
 
   - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
+    name: Tool link
+    desc: A collection of commonly used websites
+    link: /Collection
 
   - icon: book
     name: book name

@@ -7,12 +7,12 @@ const __dirname = getDirname(import.meta.url);
 export default hopeTheme({
   hostname: "https://nulizongyouhuibao.space",//部署的域名
 
-  favicon:"/assets/icon/darklogo.png",
+  favicon:"/assets/icon/darklogo.png", //浏览器标签上的图片
 
   author: {
     name: "Haitong Gao",//博主 名称
-    url: "https://mister-hope.com",//博主 网站 文章页作者处的链接
-    email: "ght139439@queueMicrotask.com",//博主 email
+    url: "https://github.com/Passeur-G/Passeur-G.github.io",//博主 网站 文章页作者处的链接
+    email: "ght139439@qq.com",//博主 email
   },
 
   pageInfo: ['Author', 'Date', 'Original', 'Word', 'ReadingTime', 'PageView', 'Category', 'Tag'],//文章属性：作者、日期...
@@ -166,7 +166,7 @@ export default hopeTheme({
     },
     prismjs: false,
     copyright: {
-      author: "Oragekk",
+      author: "Passeur",
       license: "CC BY-NC-SA 4.0",
       global: true,
     },

@@ -4,19 +4,19 @@ layout: BlogHome
 icon: home
 title: 博客主页
 heroImage: /assets/icon/logo2.png
-heroText: 你博客的名称
+heroText: false
 heroFullScreen: true
-tagline: 你可以在这里放置你的口号与标语
+tagline: true
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
+    name: 项目合集
+    desc: 开源项目练习集合
     link: https://你的项目链接
 
   - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+    name: 工具链接
+    desc: 一些常用的网站合集
+    link: /Collection
 
   - icon: book
     name: 书籍名称
