@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/</link>
     <description>A blog demo for vuepress-theme-hope</description>
     <language>en-US</language>
-    <pubDate>Sat, 09 Mar 2024 16:54:25 GMT</pubDate>
-    <lastBuildDate>Sat, 09 Mar 2024 16:54:25 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Mar 2024 14:34:58 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Mar 2024 14:34:58 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2024 - present Passeur</copyright>
@@ -19,6 +19,17 @@
     <category>Vegetable</category>
     <category>Apple</category>
     <category>Banana</category>
+    <item>
+      <title>常用网站资源合集</title>
+      <link>https://nulizongyouhuibao.space/Collection.html</link>
+      <guid>https://nulizongyouhuibao.space/Collection.html</guid>
+      <source url="https://nulizongyouhuibao.space/rss.xml">常用网站资源合集</source>
+      <description>常用网站资源合集 1. 大模型工具 </description>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>1.  大模型工具</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>Intro Page</title>
       <link>https://nulizongyouhuibao.space/intro.html</link>
