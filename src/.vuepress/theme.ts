@@ -277,6 +277,7 @@ export default hopeTheme({
     feed: {
       rss: true,
     },
+    searchPro: true,
 
     // install vuepress-plugin-pwa2 and uncomment these if you want a PWA
     pwa: {

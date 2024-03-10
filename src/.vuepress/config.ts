@@ -5,7 +5,8 @@ import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+//import { docsearchPlugin } from "@vuepress/plugin-docsearch";  待研究
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
@@ -18,6 +19,7 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/",
 
+  
   locales: {
     "/": {
       lang: "en-US",
@@ -123,94 +125,27 @@ export default defineUserConfig({
     },
   }),
   // 搜索插件
-  docsearchPlugin({
-    appId: "15OXP8FDHT",
-    apiKey: "8c63da609ed28c67f21649a05aba8855",
-    indexName: "nulizongyouhuibao",
-    locales: {
-      "/": {
-        placeholder: "搜索内容",
-        translations: {
-          button: {
-            buttonText: "搜索",
-            buttonAriaLabel: "搜索",
-          },
-          modal: {
-            searchBox: {
-              resetButtonTitle: "清除查询条件",
-              resetButtonAriaLabel: "清除查询条件",
-              cancelButtonText: "取消",
-              cancelButtonAriaLabel: "取消",
-            },
-            startScreen: {
-              recentSearchesTitle: "搜索历史",
-              noRecentSearchesText: "没有搜索历史",
-              saveRecentSearchButtonTitle: "保存至搜索历史",
-              removeRecentSearchButtonTitle: "从搜索历史中移除",
-              favoriteSearchesTitle: "收藏",
-              removeFavoriteSearchButtonTitle: "从收藏中移除",
-            },
-            errorScreen: {
-              titleText: "无法获取结果",
-              helpText: "你可能需要检查你的网络连接",
-            },
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-              closeText: "关闭",
-              searchByText: "搜索提供者",
-            },
-            noResultsScreen: {
-              noResultsText: "无法找到相关结果",
-              suggestedQueryText: "你可以尝试查询",
-              reportMissingResultsText: "你认为该查询应该有结果？",
-              reportMissingResultsLinkText: "点击反馈",
-            },
+  searchProPlugin({
+      autoSuggestions:true,//自动提示搜索建议
+      // 索引全部内容
+      indexContent: true,
+      // 为分类和标签添加索引
+      customFields: [
+        {
+          getter: ({ frontmatter }): string[] => <string[]>frontmatter["tag"],
+          formatter: {
+            "/": "Tag: $content",
+            "/zh/": "标签：$content",
           },
         },
-      },
-      "/zh/": {
-        placeholder: "搜索内容",
-        translations: {
-          button: {
-            buttonText: "搜索",
-            buttonAriaLabel: "搜索",
-          },
-          modal: {
-            searchBox: {
-              resetButtonTitle: "清除查询条件",
-              resetButtonAriaLabel: "清除查询条件",
-              cancelButtonText: "取消",
-              cancelButtonAriaLabel: "取消",
-            },
-            startScreen: {
-              recentSearchesTitle: "搜索历史",
-              noRecentSearchesText: "没有搜索历史",
-              saveRecentSearchButtonTitle: "保存至搜索历史",
-              removeRecentSearchButtonTitle: "从搜索历史中移除",
-              favoriteSearchesTitle: "收藏",
-              removeFavoriteSearchButtonTitle: "从收藏中移除",
-            },
-            errorScreen: {
-              titleText: "无法获取结果",
-              helpText: "你可能需要检查你的网络连接",
-            },
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-              closeText: "关闭",
-              searchByText: "搜索提供者",
-            },
-            noResultsScreen: {
-              noResultsText: "无法找到相关结果",
-              suggestedQueryText: "你可以尝试查询",
-              reportMissingResultsText: "你认为该查询应该有结果？",
-              reportMissingResultsLinkText: "点击反馈",
-            },
+        {
+          getter: ({ frontmatter }): string[] => <string[]>frontmatter["category"],
+          formatter: {
+            "/": "Category: $content",
+            "/zh/": "分类：$content",
           },
         },
-      },
-    },
+      ],
   }),
   ],
   theme,
