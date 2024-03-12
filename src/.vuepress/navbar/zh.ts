@@ -45,8 +45,94 @@ export const zhNavbar = navbar([
     ],
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "工具集合",
+    icon: "pen-to-square",
+    prefix: "/zh/posts/",
+    children: [
+      {
+        text: "仓库配置",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "Maven", icon: "pen-to-square", link: "1" },
+        ],
+      },
+      {
+        text: "请求测试",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "Postman", icon: "pen-to-square", link: "1" },
+        ],
+      },
+      {
+        text: "部署工具",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "Docker", icon: "pen-to-square", link: "1" },
+        ],
+      },
+      {
+        text: "数据库工具",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "Navicat", icon: "pen-to-square", link: "1" },
+        ],
+      },
+    ],
+  },
+  {
+    text: "框架集合",
+    icon: "pen-to-square",
+    prefix: "/zh/posts/",
+    children: [
+      {
+        text: "前端框架",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "React", icon: "pen-to-square", link: "1" },
+          { text: "Vue", icon: "pen-to-square", link: "2" },
+        ],
+      },
+      {
+        text: "ORM框架",
+        icon: "pen-to-square",
+        prefix: "apple/",
+        children: [
+          { text: "Mybatis", icon: "pen-to-square", link: "1" },
+          { text: "MybatisPlus", icon: "pen-to-square", link: "2" },
+        ],
+      },
+    ],
+  },
+  {
+    text: "Sping全家桶",
+    icon: "pen-to-square",
+    prefix: "banana/",
+    children: [
+      {
+        text: "Spring",
+        icon: "pen-to-square",
+        link: "1",
+      },
+      {
+        text: "SpringBoot",
+        icon: "pen-to-square",
+        link: "2",
+      },
+      {
+        text: "SpringCloud",
+        icon: "pen-to-square",
+        link: "3",
+      },
+      {
+        text: "SpringMVC",
+        icon: "pen-to-square",
+        link: "4",
+      },
+    ],
   },
 ]);

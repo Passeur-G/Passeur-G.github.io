@@ -1,42 +1,52 @@
 ---
 home: true
 layout: BlogHome
-icon: home
-title: 博客主页
+icon: blog
+title: 主页
 heroImage: /assets/icon/logo2.png
 heroText: false
 heroFullScreen: true
 tagline: true
 projects:
   - icon: project
-    name: 项目合集
+    name: 项目 合集
     desc: 开源项目练习集合
-    link: https://你的项目链接
+    link: /Projects/
 
   - icon: link
-    name: 工具链接
+    name: 工具 链接
     desc: 一些常用的网站合集
     link: /Collection
 
   - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
-    link: https://你的书籍链接
+    name: 我的 书柜
+    desc: 黄金屋和颜如玉
+    link: /books/
 
-  - icon: article
-    name: 文章名称
-    desc: 文章详细描述
-    link: https://你的文章链接
+  - icon: hammer
+    name: Acwing
+    desc: 算法系统学习
+    link: /algorithm/
 
-  - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+  - icon: bug-slash
+    name: Bug 记录
+    desc: 记录一些遇到的问题
+    link: /record/
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: 自定义项目
-    desc: 自定义详细介绍
-    link: https://你的自定义链接
+  - icon: cart-shopping
+    name: 赛博物品柜
+    desc: 一些有意义的物品
+    link: /meaningful/
+
+  - icon: cat
+    name: 生活的点点滴滴
+    desc: 人的生命只有一次
+    link: /life/
+
+  - icon: list
+    name: 知识学习清单
+    desc: 打怪之路上的Boss
+    link: /knowlege/
 
 footer: |-
   <a href="http://beian.miit.gov.cn/" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">

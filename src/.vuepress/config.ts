@@ -107,7 +107,7 @@ export default defineUserConfig({
     theme: "one-dark-pro",
   }),
   // 遮罩插件
-  gradientCoverPlugin({}),
+   gradientCoverPlugin({}),
   //一言插件
   hitokotoPlugin({}),
   // 谷歌统计

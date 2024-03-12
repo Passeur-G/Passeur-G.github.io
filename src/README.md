@@ -1,8 +1,8 @@
 ---
 home: true
 layout: BlogHome
-icon: home
-title: Passeur's Blog
+icon: blog
+title: Home
 heroImage: /assets/icon/logo2.png
 heroText: false
 tagline: true
@@ -11,7 +11,7 @@ projects:
   - icon: project
     name: Item collection
     desc: Open source project practice set
-    link: https://your.project.link
+    link: /Projects/
 
   - icon: link
     name: Tool link
@@ -19,24 +19,34 @@ projects:
     link: /Collection
 
   - icon: book
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
+    name: My bookcase
+    desc: Knowledge collection
+    link: /books/
 
-  - icon: article
-    name: article name
-    desc: Detailed description of the article
-    link: https://link.to.your.article
+  - icon: hammer
+    name: Acwing
+    desc: Algorithm learning
+    link: /algorithm/
 
-  - icon: friend
-    name: friend name
-    desc: Detailed description of friend
-    link: https://link.to.your.friend
+  - icon: bug-slash
+    name: Bug record
+    desc: Record some of the problems you encounter
+    link: /record/
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
+  - icon: cart-shopping
+    name: Cyberlocker
+    desc: Something meaningful
+    link: /meaningful/
+
+  - icon: cat
+    name: Every bit of life
+    desc: Cherish life, life only have once
+    link: /life/
+
+  - icon: list
+    name: learning list
+    desc: The Boss of the way to fight monsters
+    link: /knowlege/
 
 footer: |-
   <a href="http://beian.miit.gov.cn/" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">
