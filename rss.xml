@@ -6,21 +6,14 @@
     <link>https://nulizongyouhuibao.space/</link>
     <description>A blog demo for vuepress-theme-hope</description>
     <language>en-US</language>
-    <pubDate>Tue, 12 Mar 2024 17:01:21 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Mar 2024 17:01:21 GMT</lastBuildDate>
+    <pubDate>Sat, 16 Mar 2024 16:15:10 GMT</pubDate>
+    <lastBuildDate>Sat, 16 Mar 2024 16:15:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2024 - present Passeur</copyright>
     <category>Blog</category>
     <category>个人简介</category>
     <category>Guide</category>
-    <category>Cherry</category>
-    <category>Dragon Fruit</category>
-    <category>Fruit</category>
-    <category>Strawberry</category>
-    <category>Vegetable</category>
-    <category>Apple</category>
-    <category>Banana</category>
     <item>
       <title>关于本站</title>
       <link>https://nulizongyouhuibao.space/about.html</link>
@@ -394,181 +387,6 @@
 <p>The first H1 title in Markdown will be regarded as page title.</p>
 <p>You can also set title in Markdown's Frontmatter:</p>
 <div class="language-markdown line-numbers-mode" data-ext="md" data-title="md"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>Cherry</title>
-      <link>https://nulizongyouhuibao.space/posts/cherry.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/cherry.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Cherry</source>
-      <description>Cherry Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Cherry</category>
-      <pubDate>Sun, 09 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Dragon Fruit</title>
-      <link>https://nulizongyouhuibao.space/posts/dragonfruit.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/dragonfruit.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Dragon Fruit</source>
-      <description>Dragon Fruit Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Dragon Fruit</category>
-      <category>Fruit</category>
-      <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Strawberry</title>
-      <link>https://nulizongyouhuibao.space/posts/strawberry.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/strawberry.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Strawberry</source>
-      <description>Strawberry Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Fruit</category>
-      <category>Strawberry</category>
-      <pubDate>Tue, 11 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Tomato</title>
-      <link>https://nulizongyouhuibao.space/posts/tomato.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/tomato.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Tomato</source>
-      <description>Tomato Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Vegetable</category>
-      <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-      <enclosure url="https://nulizongyouhuibao.space/assets/images/cover2.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Apple 1</title>
-      <link>https://nulizongyouhuibao.space/posts/apple/1.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/apple/1.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Apple 1</source>
-      <description>Apple 1 Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Apple</category>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Apple 2</title>
-      <link>https://nulizongyouhuibao.space/posts/apple/2.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/apple/2.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Apple 2</source>
-      <description>Apple 2 A apple article being stared. Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Apple</category>
-      <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>A apple article being stared.</p>
-<!-- more -->
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Apple 4</title>
-      <link>https://nulizongyouhuibao.space/posts/apple/4.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/apple/4.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Apple 4</source>
-      <description>Apple 4 Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Apple</category>
-      <category>Fruit</category>
-      <pubDate>Tue, 04 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Banana 1</title>
-      <link>https://nulizongyouhuibao.space/posts/banana/1.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/banana/1.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Banana 1</source>
-      <description>Banana 1 Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Banana</category>
-      <category>Fruit</category>
-      <pubDate>Wed, 05 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Banana 2</title>
-      <link>https://nulizongyouhuibao.space/posts/banana/2.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/banana/2.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Banana 2</source>
-      <description>Banana 2 A banana article being stared with number 10. Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Banana</category>
-      <category>Fruit</category>
-      <pubDate>Thu, 06 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>A banana article being stared with number <code>10</code>.</p>
-<!-- more -->
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Banana 3</title>
-      <link>https://nulizongyouhuibao.space/posts/banana/3.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/banana/3.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Banana 3</source>
-      <description>Banana 3 Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Banana</category>
-      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Banana 4</title>
-      <link>https://nulizongyouhuibao.space/posts/banana/4.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/banana/4.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">Banana 4</source>
-      <description>Banana 4 Heading 2 Here is the content. Heading 3 Here is the content. </description>
-      <category>Banana</category>
-      <pubDate>Sat, 08 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>Heading 2</h2>
-<p>Here is the content.</p>
-<h3>Heading 3</h3>
-<p>Here is the content.</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
