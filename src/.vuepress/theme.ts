@@ -20,9 +20,12 @@ export default hopeTheme({
   //iconPrefix: "", //图标前缀用于，简化图标输入 参考文档
   //print: false,//打印按钮
   //pure: ture,//纯净模式
-  //fullscreen: true,//全屏模式
+  fullscreen: true,//全屏模式
 
-  iconAssets: "fontawesome-with-brands",//图标支持库
+  iconAssets: [
+    "fontawesome-with-brands",
+    "https://at.alicdn.com/t/c/font_4469330_v6tbk82wf68.css"
+  ],//图标支持库
 
   logo: "/assets/icon/logo.png",//导航栏logo图标
 

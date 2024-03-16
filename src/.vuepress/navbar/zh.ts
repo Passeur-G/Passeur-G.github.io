@@ -2,137 +2,224 @@ import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
   "/zh/",
-  "/zh/demo/",
   {
-    text: "博文",
-    icon: "pen-to-square",
-    prefix: "/zh/posts/",
+    text: "环境配置和教程",
+    icon: "fa-solid fa-download",
     children: [
       {
-        text: "苹果",
-        icon: "pen-to-square",
-        prefix: "apple/",
+        text: "开发工具",
+        prefix:"/zh/posts/DevelopmentKit/",
         children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
+          { text: "Eclipse", icon: "fa-solid fa-e", link: "Eclipse/" },
+          { text: "Idea", icon: "fa-solid fa-i", link: "Idea/" },
+          { text: "VScode", icon: "fa-solid fa-code", link: "VScode/" },
         ],
       },
       {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
+        text: "数据库设计及虚拟机",
+        prefix:"/zh/posts/Database/",
         children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
+          { text: "PowerDesigner", icon: "fa-solid fa-database", link: "PowerDesigner/" },
+          { text: "VMware", icon: "fa-solid fa-v", link: "VMware/" },
         ],
       },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
+      {
+        text: "网盘工具及搜索工具",
+        children: [
+          { text: "蓝奏云", icon: "fa-solid fa-folder", link: "https://up.woozooo.com/" },
+          { text: "大圣盘", icon: "fa-solid fa-folder-open", link: "https://www.dashengpan.com/#/main/search?restype=1" },
+        ],
+      },
+      {
+        text: "其他小教程",
+        prefix:"/zh/posts/OtherTutorials/",
+        children: [
+          { text: "编码规范", icon: "fa-solid fa-scroll", link: "encoding/"  },
+          { text: "Over Wall", icon: "fa-solid fa-joint", link: "OverWall/" },
+          { text: "记笔记", icon: "fa-solid fa-t", link: "Note/" },
+        ],
+      },
+    ],
+  },
+  {
+    text: "学习笔记",
+    icon: "iconfont icon-Notes",
+    prefix: "/zh/posts/LearningNotes/",
+    children: [
+      {
+        text: "编程语言",
+        children: [
+          { text: "Java", icon: "fab fa-java", link: "Java/" },
+          { text: "Python", icon: "fab fa-python", link: "Python/" },
+          { text: "Go", icon: "fab fa-golang", link: "Go/" },
+        ],
+      },
+      {
+        text: "计算机408",
+        children: [
+          {
+            text: "计算机组成原理",
+            icon: "fa-solid fa-desktop",
+            link: "principles/",
+          },
+          {
+            text: "数据结构",
+            icon: "fa-solid fa-cubes-stacked",
+            link: "DataStructure/",
+          },
+          {
+            text: "计算机网络",
+            icon: "fab fa-internet-explorer",
+            link: "Networks/",
+          },
+          {
+            text: "操作系统",
+            icon: "fa-solid fa-microchip",
+            link: "System/",
+          },
+        ],
+      },
+      {
+        text: "知识大杂烩",
+        children: [
+          { 
+            text: "算法笔记", 
+            icon: "fa-solid fa-chart-bar", 
+            link: "Algorithm/" 
+          },
+          { 
+            text: "常用命令备忘录", 
+            icon: "fa-solid fa-book-bookmark", 
+            link: "CommandMemo/" 
+          },
+          { 
+            text: "Liunx", 
+            icon: "iconfont icon-liunx-", 
+            link: "liunx/" 
+          },
+        ]
+      },
     ],
   },
   {
     text: "工具集合",
-    icon: "pen-to-square",
-    prefix: "/zh/posts/",
+    icon: "fa-solid fa-wrench",
+    prefix: "/zh/posts/ToolSet/",
     children: [
       {
         text: "仓库配置",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "Maven", icon: "pen-to-square", link: "1" },
+          { text: "Maven", icon: "iconfont icon-maven", link: "Maven/" },
+          { text: "Git", icon: "fab fa-git-alt", link: "Git/" },
         ],
       },
       {
         text: "请求测试",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "Postman", icon: "pen-to-square", link: "1" },
+          { text: "Postman", icon: "iconfont icon-postman", link: "Postman/" },
         ],
       },
       {
         text: "部署工具",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "Docker", icon: "pen-to-square", link: "1" },
+          { text: "Docker", icon: "fab fa-docker", link: "Docker/" },
+          { text: "GitHub", icon: "fa-solid fa-code-branch", link: "Github/" },
         ],
       },
       {
         text: "数据库工具",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "Navicat", icon: "pen-to-square", link: "1" },
+          { text: "Navicat", icon: "iconfont icon-navicat", link: "Navicat/" },
+          { text: "Redis", icon: "iconfont icon-Redis", link: "Redis/" },
+          { text: "MySQL", icon: "iconfont icon-mysql-copy", link: "MySQL/" },
         ],
       },
     ],
   },
   {
     text: "框架集合",
-    icon: "pen-to-square",
-    prefix: "/zh/posts/",
+    icon: "fa-solid fa-boxes-packing",
+    prefix: "/zh/posts/FrameSet/",
     children: [
       {
         text: "前端框架",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "React", icon: "pen-to-square", link: "1" },
-          { text: "Vue", icon: "pen-to-square", link: "2" },
+          { text: "React", icon: "fab fa-react", link: "React/" },
+          { text: "Vue", icon: "fab fa-vuejs", link: "Vue/" },
         ],
       },
       {
         text: "ORM框架",
-        icon: "pen-to-square",
-        prefix: "apple/",
         children: [
-          { text: "Mybatis", icon: "pen-to-square", link: "1" },
-          { text: "MybatisPlus", icon: "pen-to-square", link: "2" },
+          { text: "Mybatis", icon: "iconfont icon-mybatis", link: "Mybatis/" },
+          { text: "MybatisPlus", icon: "iconfont icon-mybatisplus", link: "MybatisPlus/" },
+        ],
+      },
+      { 
+        text: "客户端开发",
+        children: [
+          { 
+            text: "微信小程序",
+            icon: "fab fa-weixin",
+            link: "Wechat/", 
+          },
         ],
       },
     ],
   },
   {
     text: "Sping全家桶",
-    icon: "pen-to-square",
-    prefix: "banana/",
+    icon: "iconfont icon-spring",
+    prefix: "/zh/posts/SpringAll/",
     children: [
       {
         text: "Spring",
-        icon: "pen-to-square",
-        link: "1",
+        icon: "iconfont icon-spring",
+        link: "Spring/",
       },
       {
         text: "SpringBoot",
-        icon: "pen-to-square",
-        link: "2",
+        icon: "iconfont icon-SpringBoot",
+        link: "SpringBoot/",
       },
       {
         text: "SpringCloud",
-        icon: "pen-to-square",
-        link: "3",
+        icon: "iconfont icon-SpringCloud",
+        link: "SpringCloud/",
       },
       {
         text: "SpringMVC",
-        icon: "pen-to-square",
-        link: "4",
+        icon: "iconfont icon-spring_",
+        link: "SpringMVC/",
       },
+    ],
+  },
+  {
+    text: "前端知识集",
+    icon: "fab fa-grav",
+    prefix: "/zh/posts/FrontEnd/",
+    children: [
+      {
+        text: "CSS",
+        icon: "fab fa-css3-alt",
+        link: "CSS/",
+      },
+      {
+        text: "JavaScript",
+        icon: "fab fa-js",
+        link: "JavaScript/",
+      },
+      {
+        text: "HTML",
+        icon: "fab fa-html5",
+        link: "HTML/",
+      },
+      {
+        text: "相关内容集",
+        icon: "fab fa-node",
+        link: "NodeEles/",
+      },
+      
     ],
   },
 ]);

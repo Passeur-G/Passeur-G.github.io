@@ -4,6 +4,8 @@ title: Page Config
 # This is the icon of the page
 icon: file
 # This control sidebar order
+# 你可以自定义封面图片
+# cover: /assets/images/cover1.jpg
 order: 3
 # Set author
 author: Ms.Hope

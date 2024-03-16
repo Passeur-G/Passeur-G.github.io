@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-icon: blog
+icon: fa-solid fa-blog
 title: Home
 heroImage: /assets/icon/logo2.png
 heroText: false
@@ -23,27 +23,27 @@ projects:
     desc: Knowledge collection
     link: /books/
 
-  - icon: hammer
+  - icon: fa-solid fa-hammer
     name: Acwing
     desc: Algorithm learning
-    link: /algorithm/
+    link: https://www.acwing.com/
 
-  - icon: bug-slash
+  - icon: fa-solid fa-bug-slash
     name: Bug record
     desc: Record some of the problems you encounter
     link: /record/
 
-  - icon: cart-shopping
+  - icon: fa-solid fa-cart-shopping
     name: Cyberlocker
     desc: Something meaningful
     link: /meaningful/
 
-  - icon: cat
+  - icon: fa-solid fa-cat
     name: Every bit of life
     desc: Cherish life, life only have once
-    link: /life/
+    link: https://life.nulizongyouhuibao.space
 
-  - icon: list
+  - icon: fa-solid fa-list
     name: learning list
     desc: The Boss of the way to fight monsters
     link: /knowlege/

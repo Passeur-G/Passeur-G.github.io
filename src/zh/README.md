@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-icon: blog
+icon: fa-solid fa-blog
 title: 主页
 heroImage: /assets/icon/logo2.png
 heroText: false
@@ -23,27 +23,27 @@ projects:
     desc: 黄金屋和颜如玉
     link: /books/
 
-  - icon: hammer
+  - icon: fa-solid fa-hammer
     name: Acwing
     desc: 算法系统学习
-    link: /algorithm/
+    link: https://www.acwing.com/
 
-  - icon: bug-slash
+  - icon: fa-solid fa-bug-slash
     name: Bug 记录
     desc: 记录一些遇到的问题
     link: /record/
 
-  - icon: cart-shopping
+  - icon: fa-solid fa-cart-shopping
     name: 赛博物品柜
     desc: 一些有意义的物品
     link: /meaningful/
 
-  - icon: cat
+  - icon: fa-solid fa-cat
     name: 生活的点点滴滴
     desc: 人的生命只有一次
-    link: /life/
+    link: https://life.nulizongyouhuibao.space
 
-  - icon: list
+  - icon: fa-solid fa-list
     name: 知识学习清单
     desc: 打怪之路上的Boss
     link: /knowlege/

@@ -1,5 +1,5 @@
 ---
-icon: user
+icon: fa-solid fa-user
 title: 关于我
 toc: false
 # 导航栏

@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 //import { ohmylive2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 //import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 import theme from "./theme.js";
+import { hopeTheme } from "vuepress-theme-hope";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
