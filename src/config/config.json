@@ -1,85 +1,84 @@
 {
     "index_name": "nulizongyouhuibao",
     "sitemap_urls": [
-        "https://nulizongyouhuibao.space/"
+        "https://nulizongyouhuibao.space/sitemap.xml"
     ],
     "start_urls": [
+        "https://nulizongyouhuibao.space/zh/",
         {
-            "url": "https://nulizongyouhuibao.space/talks.html",
-            "selectors_key": "talks",
+            "url": "https://nulizongyouhuibao.space/zh/posts/LearningNotes/Java/",
+            "selectors_key": "Java",
             "tags": [
-                "talks"
+                "Java"
             ]
         },
         {
-            "url": "https://nulizongyouhuibao.space/about.html",
-            "selectors_key": "about",
+            "url": "https://nulizongyouhuibao.space/zh/posts/LearningNotes/Go/",
+            "selectors_key": "Go",
             "tags": [
-                "about"
+                "Go"
             ]
         },
         {
-            "url": "https://nulizongyouhuibao.space/posts/javascript",
-            "page_rank": 1,
-            "selectors_key": "javascript",
+            "url": "https://nulizongyouhuibao.space/zh/posts/LearningNotes/Python/",
+            "selectors_key": "Python",
             "tags": [
-                "javascript"
+                "Python"
             ]
-        },
-        "https://nulizongyouhuibao.space"
+        }
     ],
     "selectors": {
-        "javascript": {
-            "lvl0": {
-                "selector": "",
-                "default_value": "Javascript"
-            },
-            "lvl1": ".theme-default-content h1",
-            "lvl2": ".theme-default-content h2",
-            "lvl3": ".theme-default-content h3",
-            "lvl4": ".theme-default-content h4",
-            "lvl5": ".theme-default-content h5",
-            "lvl6": ".theme-default-content h6",
-            "content": ".theme-default-content p, .theme-default-content li"
-        },
-        "about": {
-            "lvl0": {
-                "selector": "",
-                "default_value": "关于"
-            },
-            "lvl1": ".theme-container h1",
-            "lvl2": ".theme-container h2",
-            "lvl3": ".theme-container h3",
-            "lvl4": ".theme-container h4",
-            "lvl5": ".theme-container h5",
-            "lvl6": ".theme-container h6",
-            "content": ".theme-container p, .theme-container li"
-        },
-        "talks": {
-            "lvl0": {
-                "selector": "",
-                "default_value": "技术分享"
-            },
-            "lvl1": ".theme-container h1",
-            "lvl2": ".theme-container h2",
-            "lvl3": ".theme-container h3",
-            "lvl4": ".theme-container h4",
-            "lvl5": ".theme-container h5",
-            "lvl6": ".theme-container h6",
-            "content": ".theme-container p, .theme-container li"
-        },
         "default": {
             "lvl0": {
                 "selector": "",
                 "default_value": "文章"
             },
-            "lvl1": ".theme-default-content h1",
-            "lvl2": ".theme-default-content h2",
-            "lvl3": ".theme-default-content h3",
-            "lvl4": ".theme-default-content h4",
-            "lvl5": ".theme-default-content h5",
-            "lvl6": ".theme-default-content h6",
-            "content": ".theme-default-content p, .theme-default-content li"
+            "lvl1": "#theme-hope-content h1",
+            "lvl2": "#theme-hope-content h2",
+            "lvl3": "#theme-hope-content h3",
+            "lvl4": "#theme-hope-content h4",
+            "lvl5": "#theme-hope-content h5",
+            "lvl6": "#theme-hope-content h6",
+            "content": "#theme-hope-content p, #theme-hope-content ul, #theme-hope-content ol, #theme-hope-content li"
+        },
+        "Java": {
+            "lvl0": {
+                "selector": "",
+                "default_value": "Java"
+            },
+            "lvl1": "#theme-hope-content h1",
+            "lvl2": "#theme-hope-content h2",
+            "lvl3": "#theme-hope-content h3",
+            "lvl4": "#theme-hope-content h4",
+            "lvl5": "#theme-hope-content h5",
+            "lvl6": "#theme-hope-content h6",
+            "content": "#theme-hope-content p, #theme-hope-content ul, #theme-hope-content ol, #theme-hope-content li"
+        },
+        "Go": {
+            "lvl0": {
+                "selector": "",
+                "default_value": "Go"
+            },
+            "lvl1": "#theme-hope-content h1",
+            "lvl2": "#theme-hope-content h2",
+            "lvl3": "#theme-hope-content h3",
+            "lvl4": "#theme-hope-content h4",
+            "lvl5": "#theme-hope-content h5",
+            "lvl6": "#theme-hope-content h6",
+            "content": "#theme-hope-content p, #theme-hope-content ul, #theme-hope-content ol, #theme-hope-content li"
+        },
+        "Python": {
+            "lvl0": {
+                "selector": "",
+                "default_value": "Python"
+            },
+            "lvl1": "#theme-hope-content h1",
+            "lvl2": "#theme-hope-content h2",
+            "lvl3": "#theme-hope-content h3",
+            "lvl4": "#theme-hope-content h4",
+            "lvl5": "#theme-hope-content h5",
+            "lvl6": "#theme-hope-content h6",
+            "content": "#theme-hope-content p, #theme-hope-content ul, #theme-hope-content ol, #theme-hope-content li"
         }
     }
 }

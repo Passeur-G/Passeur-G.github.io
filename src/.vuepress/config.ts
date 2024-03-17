@@ -6,8 +6,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
-//import { docsearchPlugin } from "@vuepress/plugin-docsearch";  待研究
-import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";  
+//待研究
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
@@ -126,27 +126,53 @@ export default defineUserConfig({
     },
   }),
   // 搜索插件
-  searchProPlugin({
-      autoSuggestions:true,//自动提示搜索建议
-      // 索引全部内容
-      indexContent: true,
-      // 为分类和标签添加索引
-      customFields: [
-        {
-          getter: ({ frontmatter }): string[] => <string[]>frontmatter["tag"],
-          formatter: {
-            "/": "Tag: $content",
-            "/zh/": "标签：$content",
+  docsearchPlugin({
+    appId: "MZQB6L70BB",
+    apiKey: "92cb627abf2b4e1ea88d05cf67beb39d",
+    indexName: "nulizongyouhuibao",
+    locales: {
+      "/zh/": {
+        placeholder: "搜索内容",
+        translations: {
+          button: {
+            buttonText: "搜索",
+            buttonAriaLabel: "搜索",
+          },
+          modal: {
+            searchBox: {
+              resetButtonTitle: "清除查询条件",
+              resetButtonAriaLabel: "清除查询条件",
+              cancelButtonText: "取消",
+              cancelButtonAriaLabel: "取消",
+            },
+            startScreen: {
+              recentSearchesTitle: "搜索历史",
+              noRecentSearchesText: "没有搜索历史",
+              saveRecentSearchButtonTitle: "保存至搜索历史",
+              removeRecentSearchButtonTitle: "从搜索历史中移除",
+              favoriteSearchesTitle: "收藏",
+              removeFavoriteSearchButtonTitle: "从收藏中移除",
+            },
+            errorScreen: {
+              titleText: "无法获取结果",
+              helpText: "你可能需要检查你的网络连接",
+            },
+            footer: {
+              selectText: "选择",
+              navigateText: "切换",
+              closeText: "关闭",
+              searchByText: "搜索提供者",
+            },
+            noResultsScreen: {
+              noResultsText: "无法找到相关结果",
+              suggestedQueryText: "你可以尝试查询",
+              reportMissingResultsText: "你认为该查询应该有结果？",
+              reportMissingResultsLinkText: "点击反馈",
+            },
           },
         },
-        {
-          getter: ({ frontmatter }): string[] => <string[]>frontmatter["category"],
-          formatter: {
-            "/": "Category: $content",
-            "/zh/": "分类：$content",
-          },
-        },
-      ],
+      },
+    },
   }),
   ],
   theme,
