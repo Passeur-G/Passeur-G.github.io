@@ -2,18 +2,16 @@ import { defineUserConfig } from "vuepress";
 //import { ohmylive2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 //import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 import theme from "./theme.js";
-import { hopeTheme } from "vuepress-theme-hope";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
 import { PopperShape } from "@moefy-canvas/theme-popper";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";  
-//待研究
 import { canvasPlugin , CanvasPluginType} from "./plugins/vuepress-plugin-canvas";
 import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
 import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
 import { shikiPlugin } from "@vuepress/plugin-shiki";
 import metingPlugin  from "vuepress-plugin-meting2";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 //import { shikiPlugin } from "@vuepress/plugin-shiki";
 const __dirname = getDirname(import.meta.url);
 
@@ -126,54 +124,98 @@ export default defineUserConfig({
     },
   }),
   // 搜索插件
-  docsearchPlugin({
-    appId: "MZQB6L70BB",
-    apiKey: "92cb627abf2b4e1ea88d05cf67beb39d",
-    indexName: "nulizongyouhuibao",
-    locales: {
-      "/zh/": {
-        placeholder: "搜索内容",
-        translations: {
-          button: {
-            buttonText: "搜索",
-            buttonAriaLabel: "搜索",
-          },
-          modal: {
-            searchBox: {
-              resetButtonTitle: "清除查询条件",
-              resetButtonAriaLabel: "清除查询条件",
-              cancelButtonText: "取消",
-              cancelButtonAriaLabel: "取消",
-            },
-            startScreen: {
-              recentSearchesTitle: "搜索历史",
-              noRecentSearchesText: "没有搜索历史",
-              saveRecentSearchButtonTitle: "保存至搜索历史",
-              removeRecentSearchButtonTitle: "从搜索历史中移除",
-              favoriteSearchesTitle: "收藏",
-              removeFavoriteSearchButtonTitle: "从收藏中移除",
-            },
-            errorScreen: {
-              titleText: "无法获取结果",
-              helpText: "你可能需要检查你的网络连接",
-            },
-            footer: {
-              selectText: "选择",
-              navigateText: "切换",
-              closeText: "关闭",
-              searchByText: "搜索提供者",
-            },
-            noResultsScreen: {
-              noResultsText: "无法找到相关结果",
-              suggestedQueryText: "你可以尝试查询",
-              reportMissingResultsText: "你认为该查询应该有结果？",
-              reportMissingResultsLinkText: "点击反馈",
-            },
-          },
-        },
-      },
-    },
-  }),
+  // docsearchPlugin({
+  //   appId: "MZQB6L70BB",
+  //   apiKey: "92cb627abf2b4e1ea88d05cf67beb39d",
+  //   indexName: "nulizongyouhuibao",
+  //   searchParameters:{
+  //     facetFilters: "",
+  //   },}),
+  //   locales: {
+  //     "/": {
+  //       placeholder: "search",
+  //       translations: {
+  //         button: {
+  //           buttonText: "search",
+  //           buttonAriaLabel: "search",
+  //         },
+  //         modal: {
+  //           searchBox: {
+  //             resetButtonTitle: "清除查询条件",
+  //             resetButtonAriaLabel: "清除查询条件",
+  //             cancelButtonText: "取消",
+  //             cancelButtonAriaLabel: "取消",
+  //           },
+  //           startScreen: {
+  //             recentSearchesTitle: "搜索历史",
+  //             noRecentSearchesText: "没有搜索历史",
+  //             saveRecentSearchButtonTitle: "保存至搜索历史",
+  //             removeRecentSearchButtonTitle: "从搜索历史中移除",
+  //             favoriteSearchesTitle: "收藏",
+  //             removeFavoriteSearchButtonTitle: "从收藏中移除",
+  //           },
+  //           errorScreen: {
+  //             titleText: "无法获取结果",
+  //             helpText: "你可能需要检查你的网络连接",
+  //           },
+  //           footer: {
+  //             selectText: "选择",
+  //             navigateText: "切换",
+  //             closeText: "关闭",
+  //             searchByText: "搜索提供者",
+  //           },
+  //           noResultsScreen: {
+  //             noResultsText: "无法找到相关结果",
+  //             suggestedQueryText: "你可以尝试查询",
+  //             reportMissingResultsText: "你认为该查询应该有结果？",
+  //             reportMissingResultsLinkText: "点击反馈",
+  //           },
+  //         },
+  //       },
+  //     },
+  //     "/zh/": {
+  //       placeholder: "搜索内容",
+  //       translations: {
+  //         button: {
+  //           buttonText: "搜索",
+  //           buttonAriaLabel: "搜索",
+  //         },
+  //         modal: {
+  //           searchBox: {
+  //             resetButtonTitle: "清除查询条件",
+  //             resetButtonAriaLabel: "清除查询条件",
+  //             cancelButtonText: "取消",
+  //             cancelButtonAriaLabel: "取消",
+  //           },
+  //           startScreen: {
+  //             recentSearchesTitle: "搜索历史",
+  //             noRecentSearchesText: "没有搜索历史",
+  //             saveRecentSearchButtonTitle: "保存至搜索历史",
+  //             removeRecentSearchButtonTitle: "从搜索历史中移除",
+  //             favoriteSearchesTitle: "收藏",
+  //             removeFavoriteSearchButtonTitle: "从收藏中移除",
+  //           },
+  //           errorScreen: {
+  //             titleText: "无法获取结果",
+  //             helpText: "你可能需要检查你的网络连接",
+  //           },
+  //           footer: {
+  //             selectText: "选择",
+  //             navigateText: "切换",
+  //             closeText: "关闭",
+  //             searchByText: "搜索提供者",
+  //           },
+  //           noResultsScreen: {
+  //             noResultsText: "无法找到相关结果",
+  //             suggestedQueryText: "你可以尝试查询",
+  //             reportMissingResultsText: "你认为该查询应该有结果？",
+  //             reportMissingResultsLinkText: "点击反馈",
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  // }),
   ],
   theme,
   alias: {
