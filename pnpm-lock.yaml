@@ -55,6 +55,9 @@ devDependencies:
   '@vuepress/plugin-blog':
     specifier: 2.0.0-rc.17
     version: 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+  '@vuepress/plugin-copyright':
+    specifier: 2.0.0-rc.19
+    version: 2.0.0-rc.19(vuepress@2.0.0-rc.8)
   '@vuepress/plugin-docsearch':
     specifier: 2.0.0-rc.19
     version: 2.0.0-rc.19(@algolia/client-search@4.22.1)(search-insights@2.13.0)(vuepress@2.0.0-rc.8)
@@ -2547,6 +2550,21 @@ packages:
     transitivePeerDependencies:
       - typescript
 
+  /@vuepress/helper@2.0.0-rc.19(vuepress@2.0.0-rc.8):
+    resolution: {integrity: sha512-g8udvFCIBcEcpLTo1BFZw452oBmnflW3lCmN0rR+SfIkZymi9CnFV8LgxTF/KV7vB71QMjN8IAwCVvJ3pGCUag==, tarball: https://registry.npmmirror.com/@vuepress/helper/-/helper-2.0.0-rc.19.tgz}
+    peerDependencies:
+      vuepress: 2.0.0-rc.8
+    dependencies:
+      '@vue/shared': 3.4.21
+      cheerio: 1.0.0-rc.12
+      fflate: 0.8.2
+      gray-matter: 4.0.3
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
+    transitivePeerDependencies:
+      - typescript
+    dev: true
+
   /@vuepress/markdown@2.0.0-rc.8:
     resolution: {integrity: sha512-BJfun3rFpKbq3WwVNyJGZyc9QXN6sXKwMY2PRFiJqpG0A1ZxjZQFUvDRnSUgWEsBiluB23hZ4Pd0WP+6YNAq9w==, tarball: https://registry.npmmirror.com/@vuepress/markdown/-/markdown-2.0.0-rc.8.tgz}
     dependencies:
@@ -2587,7 +2605,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       vue: 3.4.21
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
@@ -2614,7 +2632,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       vue: 3.4.21
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
     transitivePeerDependencies:
@@ -2626,7 +2644,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       vue: 3.4.21
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
@@ -2640,7 +2658,21 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
+      '@vueuse/core': 10.9.0(vue@3.4.21)
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: true
+
+  /@vuepress/plugin-copyright@2.0.0-rc.19(vuepress@2.0.0-rc.8):
+    resolution: {integrity: sha512-vQZdkthcrjVx+c0g3r7EV/mGs5+mvUoRvp9B4f9UYgELr/SeDSEDzv9tKVqUG1nXWc9aUAkXonDjJ3f+TXZQKQ==, tarball: https://registry.npmmirror.com/@vuepress/plugin-copyright/-/plugin-copyright-2.0.0-rc.19.tgz}
+    peerDependencies:
+      vuepress: 2.0.0-rc.8
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.19(vuepress@2.0.0-rc.8)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       vue: 3.4.21
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
@@ -2717,7 +2749,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
     transitivePeerDependencies:
       - typescript
@@ -2739,7 +2771,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       photoswipe: 5.4.3
       vue: 3.4.21
@@ -2782,7 +2814,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       vue: 3.4.21
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
     transitivePeerDependencies:
@@ -2805,7 +2837,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
     transitivePeerDependencies:
       - typescript
@@ -2825,7 +2857,7 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.8
     dependencies:
-      '@vuepress/helper': 2.0.0-rc.17(vuepress@2.0.0-rc.8)
+      '@vuepress/helper': 2.0.0-rc.18(vuepress@2.0.0-rc.8)
       sitemap: 7.1.1
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(vue@3.4.21)
     transitivePeerDependencies:

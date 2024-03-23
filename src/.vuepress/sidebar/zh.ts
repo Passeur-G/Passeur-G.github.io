@@ -13,7 +13,7 @@ export const zhSidebar = sidebar({
     {
       text: "全文导航",
       icon: "fa-solid fa-magnifying-glass",
-      prefix: "zh/posts/",
+      prefix: "posts/",
       children: [
         { 
           text: "Eclipse", 

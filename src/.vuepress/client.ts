@@ -1,6 +1,7 @@
 import { onMounted } from "vue";
 import { defineClientConfig } from "vuepress/client";
 import "vuepress-theme-hope/presets/bounce-icon.scss";
+import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 import packageJson from '../../package.json';
 import Layout from "./theme/layouts/Layout.vue";
 import Wormhole from "./theme/components/Wormhole";

@@ -1,5 +1,4 @@
 import { defineUserConfig } from "vuepress";
-//import { ohmylive2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 //import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
@@ -11,7 +10,8 @@ import { gradientCoverPlugin } from "./plugins/vuepress-plugin-gradient-cover";
 import { hitokotoPlugin } from "./plugins/vuepress-plugin-hitokoto";
 import { shikiPlugin } from "@vuepress/plugin-shiki";
 import metingPlugin  from "vuepress-plugin-meting2";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { copyrightPlugin } from "@vuepress/plugin-copyright";
+//import { feedPlugin } from "@vuepress/plugin-feed";
 //import { shikiPlugin } from "@vuepress/plugin-shiki";
 const __dirname = getDirname(import.meta.url);
 
@@ -23,12 +23,10 @@ export default defineUserConfig({
     "/": {
       lang: "en-US",
       title: "GaLaXy",
-      description: "A blog demo for vuepress-theme-hope",
     },
     "/zh/": {
       lang: "zh-CN",
       title: "GaLaXy",
-      description: "vuepress-theme-hope 的博客演示",
     },
   },
   plugins: [
@@ -122,6 +120,12 @@ export default defineUserConfig({
       size: 1.95,
       numParticles: 8,
     },
+  }),
+  copyrightPlugin({
+    global: true,
+    triggerLength: 160,
+    author:"Gao HaiTong",
+    license:"MIT",
   }),
   // 搜索插件
   // docsearchPlugin({

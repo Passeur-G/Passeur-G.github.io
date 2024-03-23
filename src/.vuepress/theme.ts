@@ -50,6 +50,7 @@ export default hopeTheme({
   
 
   blog: {
+    
     medias: {
 
       BiliBili: "https://space.bilibili.com/3461572416506787?spm_id_from=333.337.0.0",//myB站个人主页
@@ -59,7 +60,7 @@ export default hopeTheme({
       Kuwo: "https://kuwo.cn/",//酷我音乐
       HuaBan:"https://huaban.com/materials",//花瓣素材网
       DuiTang:"https://www.duitang.com/category/?cat=wallpaper",//堆糖素材网
-      
+      Twitter:"https://twitter.com/Passeur_G",//推特
 
     },
     avatar:"/assets/icon/avatar1.png",//博主头像
@@ -175,7 +176,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard","VPBanner","BiliBili"],
     },
 
     // all features are enabled for demo, only preserve features you need here
@@ -279,13 +280,10 @@ export default hopeTheme({
     },
     feed: {
       rss: true,
+      "icon":"fa-solid fa-rss",
+      image:"https://c-ssl.duitang.com/uploads/blog/202110/03/20211003003308_33300.jpg",
+
     },
-    // docsearch: {
-    //   appId: 'MZQB6L70BB',
-    //   apiKey: '92cb627abf2b4e1ea88d05cf67beb39d',
-    //   indexName: 'nulizongyouhuibao',
-      
-    // },
     docsearch: {
       appId: "MZQB6L70BB",
       apiKey: "92cb627abf2b4e1ea88d05cf67beb39d",

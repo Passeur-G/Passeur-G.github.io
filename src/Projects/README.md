@@ -22,7 +22,7 @@ actions:
 
 highlights:
   - header: 易于安装
-    image: /assets/image/box.svg
+    image: /assets/icon/open1.png
     bgImage: https://theme-hope-assets.vuejs.press/bg/3-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/3-dark.svg
     highlights:

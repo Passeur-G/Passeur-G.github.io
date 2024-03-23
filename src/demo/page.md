@@ -7,11 +7,10 @@ icon: file
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 order: 3
-# Set author
-author: Ms.Hope
 # Set writing time
 date: 2020-01-01
-# A page can have multiple categories
+# A page can have multiple categorie
+footer: false
 category:
   - Guide
 # A page can have multiple tags
@@ -19,11 +18,10 @@ tag:
   - Page config
   - Guide
 # this page is sticky in article list
-sticky: true
+sticky: false
 # this page will appear in starred articles
 star: true
 # You can customize footer content
-footer: Footer content for test
 # You can customize copyright content
 copyright: No Copyright
 ---
