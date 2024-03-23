@@ -4,22 +4,42 @@
     <atom:link href="https://nulizongyouhuibao.space/zh/rss.xml" rel="self" type="application/rss+xml"/>
     <title>GaLaXy</title>
     <link>https://nulizongyouhuibao.space/zh/</link>
-    <description>vuepress-theme-hope 的博客演示</description>
+    <description></description>
     <language>zh-CN</language>
-    <pubDate>Sun, 17 Mar 2024 15:32:39 GMT</pubDate>
-    <lastBuildDate>Sun, 17 Mar 2024 15:32:39 GMT</lastBuildDate>
+    <pubDate>Sat, 23 Mar 2024 17:34:21 GMT</pubDate>
+    <lastBuildDate>Sat, 23 Mar 2024 17:34:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <image>
+      <title>GaLaXy</title>
+      <url>https://c-ssl.duitang.com/uploads/blog/202110/03/20211003003308_33300.jpg</url>
+      <link>https://nulizongyouhuibao.space/zh/</link>
+    </image>
+    <category>-Frontmatter配置</category>
     <category>Blog</category>
     <category>个人简介</category>
     <category>使用指南</category>
     <category>指南</category>
     <item>
+      <title>Operating guide</title>
+      <link>https://nulizongyouhuibao.space/zh/demo/use.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/demo/use.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">Operating guide</source>
+      <description>Frontmatter元素对象 根据vuepress-theme-hope关于Frontmatter的相关配置进行一个说明使用，这样每次使用时不用总翻开文档查看。 对于各类Frontmatter设置如下： 关于Feed的相关知识 对于以上的内容进行部分演示说明 代码示例 banner: 填写绝对路径 代码示例 actions: text: 前往Gith...</description>
+      <category>-Frontmatter配置</category>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>Frontmatter元素对象</h2>
+<p>根据<a href="https://theme-hope.vuejs.press/zh/config/frontmatter/info.html" target="_blank" rel="noopener noreferrer">vuepress-theme-hope</a>关于Frontmatter的相关配置进行一个说明使用，这样每次使用时不用总翻开文档查看。
+对于各类Frontmatter设置如下：</p>
+<div class="language-markdown line-numbers-mode" data-ext="md" data-title="md"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"></div></div>]]></content:encoded>
+      <enclosure url="https://nulizongyouhuibao.space/photo/bg7.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
       <title>常用网站资源合集</title>
       <link>https://nulizongyouhuibao.space/zh/Collection.html</link>
       <guid>https://nulizongyouhuibao.space/zh/Collection.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">常用网站资源合集</source>
-      <description>常用网站资源合集 1. 大模型工具 </description>
+      <description>常用网站资源合集 1. 大模型工具</description>
       <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <h2>1.  大模型工具</h2>
@@ -174,7 +194,7 @@
       <link>https://nulizongyouhuibao.space/zh/intro.html</link>
       <guid>https://nulizongyouhuibao.space/zh/intro.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">关于我</source>
-      <description> 我曾七次鄙视自己的灵魂 第一次，当它本可进取时，却故作谦卑； 第二次，当它在空虚时，用爱欲爱填充； 第三次，在困难和容易之间，它选择了容易； 第四次，它犯了错，却借由别人也会犯错来宽慰自己； 第五次，它自由软弱，却把它认为是生命的坚韧； 第六次，当它鄙夷一张丑恶的嘴脸时，却不知那正是自己面具中的一副； 第七次，它侧身于生活的污泥中，虽不甘心，却又畏手...</description>
+      <description>我曾七次鄙视自己的灵魂 第一次，当它本可进取时，却故作谦卑； 第二次，当它在空虚时，用爱欲爱填充； 第三次，在困难和容易之间，它选择了容易； 第四次，它犯了错，却借由别人也会犯错来宽慰自己； 第五次，它自由软弱，却把它认为是生命的坚韧； 第六次，当它鄙夷一张丑恶的嘴脸时，却不知那正是自己面具中的一副； 第七次，它侧身于生活的污泥中，虽不甘心，却又畏手畏脚。</description>
       <category>个人简介</category>
       <pubDate>Tue, 12 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div style="text-align:center;color:#8B3A3A; background-image: url('/photo/fish.jpg'); opacity: 1; background-size:900px">
@@ -207,7 +227,7 @@
       <link>https://nulizongyouhuibao.space/zh/demo/disable.html</link>
       <guid>https://nulizongyouhuibao.space/zh/demo/disable.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">布局与功能禁用</source>
-      <description>你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。 本页面就是一个示例，禁用了如下功能: 导航栏 侧边栏 路径导航 页面信息 贡献者 编辑此页链接 更新时间 上一篇/下一篇 链接 评论 页脚 返回顶部按钮 </description>
+      <description>你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。 本页面就是一个示例，禁用了如下功能: 导航栏 侧边栏 路径导航 页面信息 贡献者 编辑此页链接 更新时间 上一篇/下一篇 链接 评论 页脚 返回顶部按钮</description>
       <category>使用指南</category>
       <pubDate>Mon, 26 Feb 2024 08:41:41 GMT</pubDate>
       <content:encoded><![CDATA[<p>你可以通过设置页面的 Frontmatter，在页面禁用功能与布局。</p>
@@ -233,7 +253,7 @@
       <link>https://nulizongyouhuibao.space/zh/demo/layout.html</link>
       <guid>https://nulizongyouhuibao.space/zh/demo/layout.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">布局</source>
-      <description>布局包括: 导航栏 侧边栏 页脚 同时每个页面包含: 路径导航 标题和页面信息 TOC (文章标题列表) 贡献者、更新时间等页面元信息 评论 主题也带有以下元素: 夜间模式按钮 返回顶部按钮 打印按钮 你可以在主题选项和页面的 frontmatter 中自定义它们。 </description>
+      <description>布局包括: 导航栏 侧边栏 页脚 同时每个页面包含: 路径导航 标题和页面信息 TOC (文章标题列表) 贡献者、更新时间等页面元信息 评论 主题也带有以下元素: 夜间模式按钮 返回顶部按钮 打印按钮 你可以在主题选项和页面的 frontmatter 中自定义它们。</description>
       <category>指南</category>
       <pubDate>Mon, 26 Feb 2024 08:41:41 GMT</pubDate>
       <content:encoded><![CDATA[<p>布局包括:</p>
