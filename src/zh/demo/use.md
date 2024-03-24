@@ -1,5 +1,5 @@
 ---
-title: Operating guide
+title: 操作指南
 icon: fa-solid fa-pen-nib
 cover: /photo/back.jpg
 author: Passeur-高
