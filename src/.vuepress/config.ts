@@ -1,5 +1,5 @@
 import { defineUserConfig } from "vuepress";
-//import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
+import { oml2dPlugin } from 'vuepress-plugin-oh-my-live2d';
 import theme from "./theme.js";
 import { getDirname, path } from "vuepress/utils";
 import { popperPlugin } from "./plugins/vuepress-plugin-popper";
@@ -30,57 +30,7 @@ export default defineUserConfig({
     },
   },
   plugins: [
-  //   [ 
-  //     oml2dPlugin ({
-  //       // 在这里配置选项
-  //       fixed: false,
-  //       models: [
-  //         {
-  //           path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/Live2D/Senko_Normals/senko.model3.json',
-  //           scale: 0.12,
-  //           position: [-20, 50],
-  //           stageStyle: {
-  //             width: 350
-  //           },
-            
-  //         },
-  //         {
-  //           path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/galgame%20live2d/Fox%20Hime%20Zero/mori_mikoc/mori_mikoc.model3.json',
-  //           position: [50, 100],
-  //           stageStyle: {
-  //             width: 300,
-  //             height: 470,
-  //           },
-  //         },
-  //         {
-  //           path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/galgame%20live2d/LOVE³-LOVE%20CUBE-/live2d/kuroneko/kuroneko.model3.json',
-  //           position: [50, 100],
-  //           stageStyle: {
-  //             width: 300,
-  //             height: 330,
-  //           },
-            
-  //         },
-  //         {
-  //           path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/魂器学院%20(炼铜学院)/live2d/11110/Lead_00.model.json',
-  //           position: [50, 100],
-  //           stageStyle: {
-  //             width: 400,
-  //             height: 480,
-  //           },
-  //           scale:0.06,
-  //         },
-  //         {
-  //           path: 'https://model.oml2d.com/pio/model.json',
-  //           position: [0, 95],
-  //           stageStyle: {
-  //             height: 410,
-  //           },
-  //           scale:0.5,
-  //         },
-  //       ],
-  //     }),
-  // ],
+  //音乐插件
   metingPlugin({
     metingOptions: {
       global:true, // 开启关闭全局播放器
@@ -89,6 +39,70 @@ export default defineUserConfig({
       type: "playlist",
       mid: "2465726847",
     },
+  }),
+  //看板娘
+  oml2dPlugin ({
+    // 在这里配置选项
+    menus: {
+      style:{
+        left:'auto',
+        right: 10,
+      },
+    },
+    models: [
+      // {
+      //   path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/Live2D/Senko_Normals/senko.model3.json',
+      //   scale: 0.12,
+      //   position: [-20, 50],
+      //   stageStyle: {
+      //     width: 350
+      //   },
+        
+      // },
+      // {
+      //   path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/galgame%20live2d/Fox%20Hime%20Zero/mori_mikoc/mori_mikoc.model3.json',
+      //   position: [50, 100],
+      //   stageStyle: {
+      //     width: 300,
+      //     height: 470,
+      //   },
+      // },
+      // {
+      //   path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/galgame%20live2d/LOVE³-LOVE%20CUBE-/live2d/kuroneko/kuroneko.model3.json',
+      //   position: [50, 100],
+      //   stageStyle: {
+      //     width: 300,
+      //     height: 330,
+      //   },
+        
+      // },
+      {
+        path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/魂器学院%20(炼铜学院)/live2d/11110/Lead_00.model.json',
+        position: [50, 100],
+        stageStyle: {
+          width: 350,
+          height: 480,
+        },
+        scale:0.06,
+      
+      },
+      // {
+      //   path: 'https://model.oml2d.com/pio/model.json',
+      //   position: [0, 95],
+      //   stageStyle: {
+      //     height: 410,
+      //   },
+      //   scale:0.5,
+      // },
+      // {
+      //   path: 'https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model/Live2D/Senko_Normals/senko.model3.json',
+      //   scale: 0.12,
+      //   position: [-10, 50],
+      //   stageStyle: {
+      //     width: 350
+      //   }
+      // },
+    ],
   }),
   //背景插件
   canvasPlugin({
