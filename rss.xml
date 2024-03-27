@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/</link>
     <description></description>
     <language>en-US</language>
-    <pubDate>Mon, 25 Mar 2024 07:29:51 GMT</pubDate>
-    <lastBuildDate>Mon, 25 Mar 2024 07:29:51 GMT</lastBuildDate>
+    <pubDate>Wed, 27 Mar 2024 16:46:17 GMT</pubDate>
+    <lastBuildDate>Wed, 27 Mar 2024 16:46:17 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2024 - present Passeur</copyright>
@@ -16,41 +16,10 @@
       <url>https://c-ssl.duitang.com/uploads/blog/202110/03/20211003003308_33300.jpg</url>
       <link>https://nulizongyouhuibao.space/</link>
     </image>
-    <category>-Java基础</category>
     <category>-Frontmatter配置</category>
     <category>Blog</category>
     <category>个人简介</category>
     <category>Guide</category>
-    <item>
-      <title>JavaSE</title>
-      <link>https://nulizongyouhuibao.space/posts/LearningNotes/Java/JavaSE/</link>
-      <guid>https://nulizongyouhuibao.space/posts/LearningNotes/Java/JavaSE/</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">JavaSE</source>
-      <description>Info 这里放置 JavaSE相关内容</description>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container info">
-<p class="hint-container-title">Info</p>
-<p>这里放置 JavaSE相关内容</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>JavaSE基础01</title>
-      <link>https://nulizongyouhuibao.space/posts/LearningNotes/Java/JavaSE/java.html</link>
-      <guid>https://nulizongyouhuibao.space/posts/LearningNotes/Java/JavaSE/java.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">JavaSE基础01</source>
-      <description>Info 只不过是重头再来一次罢了 一级标题模板 二级标题模板 三级标题模板</description>
-      <category>-Java基础</category>
-      <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container info">
-<p class="hint-container-title">Info</p>
-<p>只不过是重头再来一次罢了</p>
-</div>
-<h1>一级标题模板</h1>
-<h2>二级标题模板</h2>
-<h3>三级标题模板</h3>
-]]></content:encoded>
-    </item>
     <item>
       <title>Operating guide</title>
       <link>https://nulizongyouhuibao.space/demo/use.html</link>
