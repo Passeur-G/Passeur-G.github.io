@@ -31,6 +31,13 @@
           style="width: auto; height: 32px"
           title="开往-友链接力"
       /></a>
+      <a href="https://www.netlify.com/" target="_blank">
+        <img
+          src="https://pic.imgdb.cn/item/66044c2e9f345e8d039b67de.gif"
+          alt=""
+          style="width: auto; height: 32px"
+          title="本站由Netlify部署支持"
+      /></a>
       <!-- <a href="https://www.foreverblog.cn/" target="_blank">
         <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width: auto; height: 16px" />
       </a> -->

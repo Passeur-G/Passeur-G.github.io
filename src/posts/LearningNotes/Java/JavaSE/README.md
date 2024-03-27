@@ -2,7 +2,7 @@
 title: "JavaSE"
 icon: fa-b fa-java
 date: 2024-03-24
-index: false
+article: false
 ---
 
 :::info

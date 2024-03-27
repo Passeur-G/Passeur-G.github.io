@@ -6,7 +6,7 @@ category:
   -Java基础
 tag: 
   -JavaSE
-index: false
+article: false
 ---
 ::: info
 只不过是重头再来一次罢了
