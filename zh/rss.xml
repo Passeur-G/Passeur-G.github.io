@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/zh/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Wed, 27 Mar 2024 16:46:17 GMT</pubDate>
-    <lastBuildDate>Wed, 27 Mar 2024 16:46:17 GMT</lastBuildDate>
+    <pubDate>Sat, 27 Apr 2024 14:39:52 GMT</pubDate>
+    <lastBuildDate>Sat, 27 Apr 2024 14:39:52 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <image>
@@ -15,11 +15,360 @@
       <url>https://c-ssl.duitang.com/uploads/blog/202110/03/20211003003308_33300.jpg</url>
       <link>https://nulizongyouhuibao.space/zh/</link>
     </image>
+    <category>-Nginx</category>
+    <category>-Cookie</category>
+    <category>-Token</category>
     <category>-Frontmatter配置</category>
     <category>Blog</category>
     <category>个人简介</category>
     <category>使用指南</category>
     <category>指南</category>
+    <item>
+      <title>反向代理</title>
+      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">反向代理</source>
+      <description>相关信息 这里放置 Nginx 相关的内容 深入理解反向代理 正向代理 : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址 正向代理和反向代理的区别：正向代理...</description>
+      <category>-Nginx</category>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>这里放置 Nginx 相关的内容</p>
+</div>
+<h2>深入理解反向代理</h2>
+<p><code>正向代理</code> : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceab40ea9cb1403f9532c.png">
+</div>
+<p>正向代理和反向代理的区别：正向代理代理的是<code>客户端</code>	反向代理代理的是<code>服务端</code></p>
+<p><code>反向代理</code>：代理服务器根据客户端的请求，从后台服务器上获取这些资源，然后再把这些资源返回给客户端的过程，客户端只知道代理服务器的ip地址而不知道后台服务器集群的地址，从而保障应用服务器的安全同时实现负载均衡和跨域</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceab10ea9cb1403f94734.png">
+</div>
+<p>额外的补充和说明可以参考这篇博文 <a href="https://zhuanlan.zhihu.com/p/464965616" target="_blank" rel="noopener noreferrer">深入理解http反向代理</a>、<a href="https://zhuanlan.zhihu.com/p/34943332" target="_blank" rel="noopener noreferrer">8分钟带你深入浅出搞懂Nginx</a>和视频 <a href="https://www.bilibili.com/video/BV1vm4y1z7EB?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">关于Nginx反向代理</a>,其中的例子都很形象</p>
+<h2>负载均衡和跨域</h2>
+<p><code>跨域</code>：<strong>跨域</strong>，指的是浏览器不能执行其他网站的脚本。它是由浏览器的同源策略造成的，是浏览器施加的安全限制。所谓同源是指，域名，协议，端口**均相同，只要有一个不同，就是跨域
+举例说明：</p>
+<blockquote>
+<p>http://www.123.com/index.html 调用 http://www.123.com/server.php （非跨域）
+http://www.123.com/index.html 调用 http://www.456.com/server.php （主域名不同:123/456，跨域）
+http://abc.123.com/index.html 调用 http://def.123.com/server.php （子域名不同:abc/def，跨域）
+http://www.123.com:8080/index.html 调用 http://www.123.com:8081/server.php （端口不同:8080/8081，跨域）
+http://www.123.com/index.html 调用 https://www.123.com/server.php （协议不同:http/https，跨域）
+请注意：localhost和127.0.0.1虽然都指向本机，但也属于跨域。</p>
+</blockquote>
+<p>浏览器执行javascript脚本时，会检查这个脚本属于哪个页面，如果不是同源页面，就不会被执行。
+另外补充参考：<a href="https://cloud.tencent.com/developer/article/2070976" target="_blank" rel="noopener noreferrer">什么是跨域及怎么解决跨域问题?</a>、<a href="https://blog.csdn.net/qq_38628046/article/details/114853652" target="_blank" rel="noopener noreferrer">彻底理解什么是跨域</a></p>
+<p><code>负载均衡</code>: 当业务量特别大的时候，有多台应用服务器集群，当客户端向代理服务器发送请求时，代理服务器会将此请求转发给可用的服务器，而转发是根据负载均衡的算法实现，包括 轮询、加权轮询、IP哈希 其他算法（URL_bash、最小连接数）Nginx带有健康检查，会定期轮询向集群里的服务器发送健康检查请求，当发现某台服务器异常，就不会发送请求给这台服务，提升了客户端访问的稳定性</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceaab0ea9cb1403f936a3.png">
+</div>
+<p>另外补充参考：<a href="https://zhuanlan.zhihu.com/p/134220193" target="_blank" rel="noopener noreferrer">五分钟看懂 Nginx 负载均衡</a>、<a href="https://www.nginx.com/resources/glossary/load-balancing/" target="_blank" rel="noopener noreferrer">什么是负载均衡？负载均衡器的工作原理</a>、<a href="https://blog.csdn.net/zpf1813763637/article/details/109455451" target="_blank" rel="noopener noreferrer">nginx配置负载均衡</a></p>
+<h2>Nginx的架构</h2>
+<p>当Nginx启动之后，后台会运行一个master进程和多个worker进程，master进程主要用于管理所有的worker进程，多个worker进程会去竞争客户端的请求，一个请求只能被一个worker进程处理，worker进程在配置文件中进行设置（通常，worker进程个数和CPU核心数一致）。当master进程收到信号，例如重启Nginx，这时master进程会重新加载配置文件，启动新的worker进程，对所有旧的worker进程发送信号使其不再处理请求，新的worker进程启动后开始接受新的请求，注意旧的worker进程会在处理完当前正在处理的请求后才会退出工作。</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceaae0ea9cb1403f93e64.png">
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Nginx配置</title>
+      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">Nginx配置</source>
+      <description>相关信息 这里放置 Nginx相关内容 Nginx的配置文件 如果worker数超过CPU核数，会导致进程之间来去竞争CPU资源，产生不必要的上下文切换 最大并发量等于 worker进程的个数乘以连接上限，如果是反向代理，那么最大并发量需要除以2（因为每个并发会建立与客户端的连接和与后台服务器的连接，占用两个连接） nginx详细参数配置(史上最全) ...</description>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>这里放置 Nginx相关内容</p>
+</div>
+<h2>Nginx的配置文件</h2>
+<div class="language-nginx line-numbers-mode" data-ext="nginx" data-title="nginx"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"><span style="color:#7F848E;font-style:italic"># 全局参数</span></span>
+<span class="line"><span style="color:#C678DD">user </span><span style="color:#ABB2BF">nginx;              </span><span style="color:#7F848E;font-style:italic"># Nginx进程运行用户</span></span>
+<span class="line"><span style="color:#C678DD">worker_processes </span><span style="color:#ABB2BF">auto;   </span><span style="color:#7F848E;font-style:italic"># Nginx工作进程数，通常设置为CPU核数</span></span>
+<span class="line"><span style="color:#C678DD">error_log </span><span style="color:#ABB2BF">/var/log/nginx/error.log</span><span style="color:#D19A66"> warn</span><span style="color:#ABB2BF">;    </span><span style="color:#7F848E;font-style:italic"># 错误日志路径和日志级别</span></span>
+<span class="line"><span style="color:#C678DD">pid </span><span style="color:#ABB2BF">/run/nginx.pid;      </span><span style="color:#7F848E;font-style:italic"># 进程PID保存路径</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"># 定义事件模块</span></span>
+<span class="line"><span style="color:#C678DD">events</span><span style="color:#ABB2BF"> {</span></span>
+<span class="line"><span style="color:#C678DD"> worker_connections </span><span style="color:#ABB2BF">1024;    </span><span style="color:#7F848E;font-style:italic"># 每个工作进程最大并发连接数 </span></span>
+<span class="line"><span style="color:#C678DD"> use </span><span style="color:#ABB2BF">epoll;                  </span><span style="color:#7F848E;font-style:italic"># 使用epoll网络模型，提高性能</span></span>
+<span class="line"><span style="color:#C678DD"> multi_accept </span><span style="color:#ABB2BF">on;            </span><span style="color:#7F848E;font-style:italic"># 开启支持多个连接同时建立</span></span>
+<span class="line"><span style="color:#ABB2BF">} </span><span style="color:#7F848E;font-style:italic">#配置服务器与用户的网络连接</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"># 定义HTTP服务器模块,用来配置代理、缓存、日志等</span></span>
+<span class="line"><span style="color:#C678DD">http</span><span style="color:#ABB2BF"> {</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 缓存文件目录</span></span>
+<span class="line"><span style="color:#C678DD"> client_body_temp_path </span><span style="color:#ABB2BF">/var/cache/nginx/client_temp;</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_temp_path </span><span style="color:#ABB2BF">/var/cache/nginx/proxy_temp;</span></span>
+<span class="line"><span style="color:#C678DD"> fastcgi_temp_path </span><span style="color:#ABB2BF">/var/cache/nginx/fastcgi_temp;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 定义日志格式，main是默认的日志格式</span></span>
+<span class="line"><span style="color:#C678DD"> log_format </span><span style="color:#ABB2BF">main </span><span style="color:#98C379">'$</span><span style="color:#E06C75">remote_addr</span><span style="color:#98C379"> - $</span><span style="color:#E06C75">remote_user</span><span style="color:#98C379"> [$</span><span style="color:#E06C75">time_local</span><span style="color:#98C379">] "$</span><span style="color:#E06C75">request</span><span style="color:#98C379">" '</span></span>
+<span class="line"><span style="color:#98C379">     '$</span><span style="color:#E06C75">status</span><span style="color:#98C379"> $</span><span style="color:#E06C75">body_bytes_sent</span><span style="color:#98C379"> "$</span><span style="color:#E06C75">http_referer</span><span style="color:#98C379">" '</span></span>
+<span class="line"><span style="color:#98C379">     '"$</span><span style="color:#E06C75">http_user_agent</span><span style="color:#98C379">" "$</span><span style="color:#E06C75">http_x_forwarded_for</span><span style="color:#98C379">"'</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 默认访问日志保存路径和格式</span></span>
+<span class="line"><span style="color:#C678DD"> access_log </span><span style="color:#ABB2BF">/var/log/nginx/access.log</span><span style="color:#D19A66"> main</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 定义MIME类型 配置Nginx支持的媒体类型</span></span>
+<span class="line"><span style="color:#C678DD"> include </span><span style="color:#ABB2BF">/etc/nginx/mime.types;</span></span>
+<span class="line"><span style="color:#C678DD"> default_type </span><span style="color:#ABB2BF">application/octet-stream; </span><span style="color:#7F848E;font-style:italic">#默认类型</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD">	sendfile	</span><span style="color:#ABB2BF">on;</span><span style="color:#7F848E;font-style:italic">#是否开启高效传输模式</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> #tcp_nopush	on;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> #超时时间</span></span>
+<span class="line"><span style="color:#C678DD"> keepalive_timeout	</span><span style="color:#ABB2BF">0;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 代理参数</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_connect_timeout </span><span style="color:#ABB2BF">6s;       </span><span style="color:#7F848E;font-style:italic"># 连接超时时间</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_send_timeout </span><span style="color:#ABB2BF">10s;         </span><span style="color:#7F848E;font-style:italic"># 发送超时时间</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_read_timeout </span><span style="color:#ABB2BF">10s;         </span><span style="color:#7F848E;font-style:italic"># 接收超时时间</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_buffer_size </span><span style="color:#ABB2BF">16k;          </span><span style="color:#7F848E;font-style:italic"># 缓冲区大小</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_buffers </span><span style="color:#ABB2BF">4 </span><span style="color:#D19A66">32k</span><span style="color:#ABB2BF">;            </span><span style="color:#7F848E;font-style:italic"># 缓冲区个数和大小</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_busy_buffers_size </span><span style="color:#ABB2BF">64k;    </span><span style="color:#7F848E;font-style:italic"># 忙碌缓冲区大小</span></span>
+<span class="line"><span style="color:#C678DD"> proxy_temp_file_write_size </span><span style="color:#ABB2BF">64k; </span><span style="color:#7F848E;font-style:italic"># 代理临时文件写入大小</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 启用压缩，可以提高网站访问速度</span></span>
+<span class="line"><span style="color:#C678DD"> gzip </span><span style="color:#ABB2BF">on;</span></span>
+<span class="line"><span style="color:#C678DD"> gzip_min_length </span><span style="color:#ABB2BF">1k;                    </span><span style="color:#7F848E;font-style:italic"># 最小压缩文件大小</span></span>
+<span class="line"><span style="color:#C678DD"> gzip_types </span><span style="color:#ABB2BF">text/plain text/css application/json application/javascript application/xml;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 定义HTTP服务器 核心 用来配置网站</span></span>
+<span class="line"><span style="color:#C678DD"> server</span><span style="color:#ABB2BF"> {</span></span>
+<span class="line"><span style="color:#C678DD">     listen </span><span style="color:#ABB2BF">80;              </span><span style="color:#7F848E;font-style:italic"># 监听端口</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD">     server_name </span><span style="color:#ABB2BF">example.com;    </span><span style="color:#7F848E;font-style:italic"># 域名</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # 重定向到HTTPS，强制使用HTTPS访问</span></span>
+<span class="line"><span style="color:#C678DD">     if</span><span style="color:#ABB2BF"> ($</span><span style="color:#E06C75">scheme</span><span style="color:#ABB2BF"> != </span><span style="color:#98C379">"https"</span><span style="color:#ABB2BF">) {</span></span>
+<span class="line"><span style="color:#C678DD">         return</span><span style="color:#D19A66"> 301</span><span style="color:#ABB2BF"> https://$</span><span style="color:#E06C75">server_name</span><span style="color:#ABB2BF">$</span><span style="color:#E06C75">request_uri</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # HTTPS服务器配置</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_certificate </span><span style="color:#ABB2BF">     /etc/nginx/ssl/server.crt;    </span><span style="color:#7F848E;font-style:italic"># SSL证书路径</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_certificate_key </span><span style="color:#ABB2BF"> /etc/nginx/ssl/server.key;    </span><span style="color:#7F848E;font-style:italic"># SSL私钥路径</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # SSL会话缓存参数</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_session_cache </span><span style="color:#ABB2BF">shared:SSL:10m;</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_session_timeout </span><span style="color:#ABB2BF">10m;</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_protocols </span><span style="color:#ABB2BF">TLSv1 TLSv1.1 TLSv1.2;</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_prefer_server_ciphers </span><span style="color:#ABB2BF">on;</span></span>
+<span class="line"><span style="color:#C678DD">     ssl_ciphers </span><span style="color:#ABB2BF">ECDH+AESGCM:ECDH+AES256:ECDH+AES128:DH+3DES:!ADH:!AECDH:!MD5;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # 配置代理路径 相对与Nginx的安装路径</span></span>
+<span class="line"><span style="color:#C678DD">     location</span><span style="color:#ABB2BF"> / {</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_pass </span><span style="color:#ABB2BF">http://localhost:8080;        </span><span style="color:#7F848E;font-style:italic"># 转发请求的目标地址</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_set_header </span><span style="color:#ABB2BF">Host $</span><span style="color:#E06C75">host</span><span style="color:#ABB2BF">;             </span><span style="color:#7F848E;font-style:italic"># 设置请求头中的Host字段</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_set_header </span><span style="color:#ABB2BF">X-Forwarded-For $</span><span style="color:#E06C75">proxy_add_x_forwarded_for</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">                         # 设置HTTP头中的X-Forwarded-For字段，表示客户端真实IP，多个IP用逗号隔开</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_set_header </span><span style="color:#ABB2BF">X-Real-IP $</span><span style="color:#E06C75">remote_addr</span><span style="color:#ABB2BF">; </span><span style="color:#7F848E;font-style:italic"># 设置请求头中的X-Real-IP字段，表示客户端真实IP</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # 配置静态文件访问路径</span></span>
+<span class="line"><span style="color:#C678DD">     location</span><span style="color:#ABB2BF"> /static/ {</span></span>
+<span class="line"><span style="color:#C678DD">         alias </span><span style="color:#ABB2BF">/path/to/static/files/;   </span><span style="color:#7F848E;font-style:italic"># 静态文件的目录</span></span>
+<span class="line"><span style="color:#C678DD">         expires </span><span style="color:#ABB2BF">7d;                     </span><span style="color:#7F848E;font-style:italic"># 静态文件缓存时间</span></span>
+<span class="line"><span style="color:#C678DD">         add_header </span><span style="color:#ABB2BF">Pragma public;       </span><span style="color:#7F848E;font-style:italic"># 添加HTTP响应头</span></span>
+<span class="line"><span style="color:#C678DD">         add_header </span><span style="color:#ABB2BF">Cache-Control </span><span style="color:#98C379">"public, must-revalidate, proxy-revalidate"</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # 配置错误页面</span></span>
+<span class="line"><span style="color:#C678DD">     error_page </span><span style="color:#ABB2BF">404 /404.html;           </span><span style="color:#7F848E;font-style:italic"># 404错误页</span></span>
+<span class="line"><span style="color:#C678DD">     location</span><span style="color:#ABB2BF"> = </span><span style="color:#E06C75">/404.html </span><span style="color:#ABB2BF">{</span></span>
+<span class="line"><span style="color:#C678DD">         internal</span><span style="color:#ABB2BF">;                       </span><span style="color:#7F848E;font-style:italic"># 不接受外部访问</span></span>
+<span class="line"><span style="color:#C678DD">         root </span><span style="color:#ABB2BF">/usr/share/nginx/html;     </span><span style="color:#7F848E;font-style:italic"># 404错误页文件所在目录</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">     # 配置重定向</span></span>
+<span class="line"><span style="color:#C678DD">     location</span><span style="color:#ABB2BF"> /old/ {</span></span>
+<span class="line"><span style="color:#C678DD">         rewrite</span><span style="color:#E06C75"> ^/old/([^/]+) /new/$</span><span style="color:#ABB2BF">1 </span><span style="color:#C678DD">permanent</span><span style="color:#ABB2BF">;   </span><span style="color:#7F848E;font-style:italic"># 将/old/xxx路径重定向为/new/xxx，返回301状态码</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"><span style="color:#ABB2BF"> }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 其他服务配置</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # server {</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> #     ...</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7F848E;font-style:italic"> # 配置TCP负载均衡</span></span>
+<span class="line"><span style="color:#C678DD"> upstream</span><span style="color:#ABB2BF"> backends {</span></span>
+<span class="line"><span style="color:#C678DD">     server</span><span style="color:#ABB2BF"> backend1.example.com:8080 </span><span style="color:#E06C75;font-style:italic">weight</span><span style="color:#ABB2BF">=</span><span style="color:#D19A66">5</span><span style="color:#ABB2BF">;  </span><span style="color:#7F848E;font-style:italic"># 后端服务器地址和权重</span></span>
+<span class="line"><span style="color:#ABB2BF">     server backend2.example.com:8080;</span></span>
+<span class="line"><span style="color:#C678DD">     server</span><span style="color:#ABB2BF"> backend3.example.com:8080 backup;   </span><span style="color:#7F848E;font-style:italic"># 备用服务器</span></span>
+<span class="line"><span style="color:#C678DD">     keepalive </span><span style="color:#ABB2BF">16;                               </span><span style="color:#7F848E;font-style:italic"># 连接池大小</span></span>
+<span class="line"><span style="color:#ABB2BF"> }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD"> server</span><span style="color:#ABB2BF"> {</span></span>
+<span class="line"><span style="color:#C678DD">     listen </span><span style="color:#ABB2BF">80; </span><span style="color:#7F848E;font-style:italic">#监听端口</span></span>
+<span class="line"><span style="color:#C678DD">     server_name </span><span style="color:#ABB2BF">example.com;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD">     location</span><span style="color:#ABB2BF"> / {</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_pass </span><span style="color:#ABB2BF">http://backends;             </span><span style="color:#7F848E;font-style:italic"># 负载均衡转发请求的目标地址</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_set_header </span><span style="color:#ABB2BF">Host $</span><span style="color:#E06C75">host</span><span style="color:#ABB2BF">;            </span><span style="color:#7F848E;font-style:italic"># 设置请求头中的Host字段</span></span>
+<span class="line"><span style="color:#C678DD">         proxy_set_header </span><span style="color:#ABB2BF">X-Real-IP $</span><span style="color:#E06C75">remote_addr</span><span style="color:#ABB2BF">; </span><span style="color:#7F848E;font-style:italic"># 设置请求头中的X-Real-IP字段，表示客户端真实IP</span></span>
+<span class="line"><span style="color:#ABB2BF">     }</span></span>
+<span class="line"><span style="color:#ABB2BF"> }</span></span>
+<span class="line"><span style="color:#ABB2BF">}</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果worker数超过CPU核数，会导致进程之间来去竞争CPU资源，产生不必要的上下文切换</p>
+<p><code>最大并发量</code>等于 worker进程的个数乘以连接上限，如果是反向代理，那么最大并发量需要除以2（因为每个并发会建立与客户端的连接和与后台服务器的连接，占用两个连接）</p>
+<p><a href="https://www.cnblogs.com/hanease/p/15890509.html" target="_blank" rel="noopener noreferrer">nginx详细参数配置(史上最全) - hanease - 博客园 (cnblogs.com)</a>、<a href="https://www.w3cschool.cn/nginx/nginx-d1aw28wa.html" target="_blank" rel="noopener noreferrer">Nginx 配置文件nginx.conf中文详解_w3cschool</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Token、Session</title>
+      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/CookieEles.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/CookieEles.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">Token、Session</source>
+      <description>Cookie的定义： 实现HTTP请求每次都自动带数据给服务器 Cookie就是一种存储在浏览器的数据 Cookie 存储在客户端,Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。 Cookie的基本流程如下： 用户在客户端输入账号密码并发送请求 ——&amp;gt; 服务端识别通过后，...</description>
+      <category>-Cookie</category>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>Cookie的定义：</h2>
+<blockquote>
+<p>实现HTTP请求每次都自动带数据给服务器    Cookie就是一种存储在浏览器的数据</p>
+</blockquote>
+<p>Cookie 存储在客户端,Cookie 是服务器发送到用户浏览器并保存在<code>本地</code>的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。</p>
+<p>Cookie的基本流程如下：</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceab70ea9cb1403f95f8a.png">
+</div>
+<p>用户在客户端输入账号密码并发送请求 ——&gt;  服务端识别通过后，会设置Cookie，将账号密码存入Cookie中并返回给客户端 ——&gt;  客户端收到后进行保存，下次发送请求Cookie被自动携带给服务端</p>
+<p>在浏览器中查看保存了哪些Cookie—— F12进入开发者模式</p>
+<div class="photo" style="zoom:80%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceac40ea9cb1403f98c3c.png">
+</div>
+<p>如果将用户名和信息放在Cookie中的话，会造成信息泄露等问题，因此引出一个新的概念Session——<code>会话</code></p>
+<h2>Session的定义：</h2>
+<p>浏览器访问服务器相当于进行会话，而多个用户访问一个服务器的话就会产生很多会话，同时可能会有误点情况导致退出会话，因此给每一个会话都设置一个ID和时长用于区分会话和恢复会话或结束会话——SeesionID  和   Max-age   由服务器定义并保存在服务器的数据库中</p>
+<p>Session的基本流程如下：</p>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceac70ea9cb1403f99437.png">
+</div>
+<p>用户在客户端输入账号密码并发送请求 ——&gt;  服务端识别账号密码，通过则随机生成一个没有规律字符串SessionID 和Max-age等参数 ——&gt;通过Cookie返回参数给客户端 ——&gt; 客户端收到后进行保存，再次发送请求时就不需要输入账号密码而是通过cookie将SessionID提交给服务器，服务器自动识别，Cookie中始终没有存放账号和密码并且当Cookie有效期失效后，浏览器自动删除Cookie，从而实现保护信息，另外服务器在发送Cookie之前会对含有SessionID的Cookie进行签名（即便被入侵修改了SessionID，仍无法访问服务器）——&gt; 服务器拿到SessionID后会在存储的Session中进行检索，检索成功则放行</p>
+<p>而随着互联网发展，用户规模也越来越大，如果一时间多个用户访问时便会生成大量的SessionID在服务器中，同时如果是在服务器集群中，又面临分享通用SeesionID给其它服务器（比如一台服务器上用户超载，分配用户给其它服务器），如果将SeesionID存放到数据库中，而数据库崩溃又会影响服务器获取SessionID，引出JWT（<code>JSON Web Token</code>）</p>
+<h2>Token的定义：</h2>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662ceac90ea9cb1403f99a11.png">
+</div>
+<p>用户第一次登录网页 ——&gt;  服务器就会生成一个JWT，服务器不需要保存JWT而只保存JWT签名的密文，而将JWT发送给浏览器 ——&gt;  浏览器使用Cookie或者Storage的形式存储，下一次发送请求时就会将JWT（以JSON对象为载体）发送过去 ——&gt;服务器端会将接收的JWT进行解密检查signature，如果没有被篡改就会放行</p>
+<p>这个流程和Session很类似，不同点在于Session是把信息存放在服务端，而JWT是把信息存储在客户端</p>
+<p>对于Token的安全性：JWT是由三部分组成，以 “ . ”分开 header.payload.signature</p>
+<p>header：声明需要什么<code>算法</code>（默认：HS256）生成签名和token类型</p>
+<p>payload：一些特定的负载<code>数据</code>，例如有效期（exp）、用户名（aud）、发行人（iss）、某个时间前不可用（nbf）、发布时间（iat）、标识JWT（jti）等，除了默认字段也可以自己定义字段</p>
+<p>signature：生成的签名信息</p>
+<p>header和payload部分内容会经Base64编码，服务器端保存一段密码，服务器端密码结合着两端编码进行算法运算生成签名信息，而算法运算就是header中声明的算法</p>
+<h2>三种方式实现了用户不需要重复登录输入密码的操作，之间的关系总结如下：</h2>
+<div class="photo" style="zoom:40%;text-align:center">
+  <img src="https://pic.imgdb.cn/item/662cead00ea9cb1403f9a8aa.png">
+</div>
+Session 诞生并且保存在服务器端，由服务器主导一切，优点：安全性高存储在服务器端容量大可以保存对象，
+<blockquote>
+<p>缺点：占用服务器资源、扩展性差（分布式集群）、需要依赖Cookie跨域限制</p>
+</blockquote>
+<p>Cookie则是一种数据载体，将Session放入Cookie中送到客户端并存储在客户端，Cookie跟随HTTP的每个请求发送出去，</p>
+<blockquote>
+<p>缺点：安全风险有被篡改风险、容量限制 4KB（默认，可修改）、用户可能禁用</p>
+</blockquote>
+<p>Token是诞生在服务器，但保存在浏览器中，由客户端主导一切，可以放到Cookie或Storage中，持有Token就像持有“令牌”一样可以允许访问服务器</p>
+<blockquote>
+<p>优点：适合用于前后端分离架构和服务区集群，解决了（移动端H5、小程序端、安卓端、苹果端、PC端 端口不一样而造成的跨域问题，在跨域情况下，Cookie无法传递需要在后端设置允许跨域，前端单独设置允许跨域的Cookie传递），不需要依赖前后端任何存储，只是一个以json传递的加密字符串，无法被篡改.</p>
+</blockquote>
+<blockquote>
+<p>缺点：JWT是无状态的，服务器不会保存会话状态，无法在到期时间前强制让用户下线（即无法取消更改令牌，解决办法只有服务端重新校验），同时不能传递敏感数据可以被解码，更大的一个空间占用相比SessionID，很多参数和字段组合转换成base64格式在网络传输中占用较大</p>
+</blockquote>
+<p>视频链接：<a href="https://www.bilibili.com/video/BV1ob4y1Y7Ep?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">Cookie、Session、Token究竟区别在哪？如何进行身份认证，保持用户登录状态？</a>   、<a href="https://www.bilibili.com/video/BV1fC411h7aE?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">Cookie、Session、Token、Jwt 一次搞清楚！</a>、<a href="https://www.bilibili.com/video/BV1to4y1F7mP?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">JWT避坑</a>、<a href="https://www.bilibili.com/video/BV18u4m1K7D4?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">Cookie、Session、Token、JWT一次性讲完</a></p>
+<p>文章链接：<a href="http://t.csdnimg.cn/e6ChH" target="_blank" rel="noopener noreferrer">Session、SessionID</a> 、<a href="https://zhuanlan.zhihu.com/p/164696755" target="_blank" rel="noopener noreferrer">还分不清 Cookie、Session、Token、JWT？ - 知乎</a> 、<a href="https://blog.csdn.net/mr_zhangxg/article/details/88580236" target="_blank" rel="noopener noreferrer">HTTP协议为什么是无状态的？无状态指的是什么_</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>JWT的使用</title>
+      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/JWT.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/JWT.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">JWT的使用</source>
+      <description>视频链接：JWT快速入门 依赖设置</description>
+      <category>-Token</category>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>视频链接：<a href="https://www.bilibili.com/video/BV1cK4y197EM?vd_source=67a29e4daedb51b6fbc5a6d3634ecf91" target="_blank" rel="noopener noreferrer">JWT快速入门</a></p>
+<p>依赖设置</p>
+<div class="language-xml line-numbers-mode" data-ext="xml" data-title="xml"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;io.jsonwebtoken&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;jjwt&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;0.9.1&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">//单元测试注解</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">    &lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;junit&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">    &lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;junit&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">    &lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;4.12&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">//以下依赖在jdk1.8后的版本加入，如果jdk1.8下只需要加入上面的依赖即可</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;javax.xml.bind&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;jaxb-api&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;2.3.0&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;com.sun.xml.bind&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;jaxb-impl&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;2.3.0&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;com.sun.xml.bind&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;jaxb-core&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;2.3.0&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;javax.activation&lt;/</span><span style="color:#E06C75">groupId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;activation&lt;/</span><span style="color:#E06C75">artifactId</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">	&lt;</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;1.1.1&lt;/</span><span style="color:#E06C75">version</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF">&lt;/</span><span style="color:#E06C75">dependency</span><span style="color:#ABB2BF">&gt;</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java" data-title="java"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"><span style="color:#C678DD">import</span><span style="color:#E5C07B"> io.jsonwebtoken.JwtBuilder</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#C678DD">import</span><span style="color:#E5C07B"> io.jsonwebtoken.Jwts</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#E06C75">    </span></span>
+<span class="line"><span style="color:#C678DD">public</span><span style="color:#C678DD"> class</span><span style="color:#E5C07B"> Use</span><span style="color:#ABB2BF"> {</span></span>
+<span class="line"><span style="color:#E06C75">    </span></span>
+<span class="line"><span style="color:#C678DD">    private</span><span style="color:#E06C75"> lang time </span><span style="color:#56B6C2">=</span><span style="color:#D19A66"> 1000</span><span style="color:#56B6C2">*</span><span style="color:#D19A66">60</span><span style="color:#56B6C2">*</span><span style="color:#D19A66">60</span><span style="color:#56B6C2">*</span><span style="color:#D19A66">24</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#C678DD">    private</span><span style="color:#E5C07B"> String</span><span style="color:#E06C75"> signature </span><span style="color:#56B6C2">=</span><span style="color:#98C379"> "admin"</span><span style="color:#ABB2BF">;</span><span style="color:#7F848E;font-style:italic"> //后端自定义的签名信息，用来解析核对token</span></span>
+<span class="line"><span style="color:#E06C75">    </span></span>
+<span class="line"><span style="color:#ABB2BF">    @</span><span style="color:#E5C07B">org</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">junit</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">Test</span></span>
+<span class="line"><span style="color:#C678DD">    public</span><span style="color:#C678DD"> void</span><span style="color:#61AFEF"> jwt</span><span style="color:#ABB2BF">(){</span></span>
+<span class="line"><span style="color:#E5C07B">		JwtBuilder</span><span style="color:#E06C75"> jwtBuilder</span><span style="color:#56B6C2"> =</span><span style="color:#E5C07B"> Jwts</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">builder</span><span style="color:#ABB2BF">();</span></span>
+<span class="line"><span style="color:#E5C07B">        String</span><span style="color:#E06C75"> jwtToken</span><span style="color:#56B6C2"> =</span><span style="color:#ABB2BF"> jwtBuilder</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">            // header 对应JWT三个部分，设置算法类型和token类型</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">setHeaderParam</span><span style="color:#ABB2BF">(s</span><span style="color:#C678DD">:</span><span style="color:#98C379">"typ"</span><span style="color:#ABB2BF">,o</span><span style="color:#C678DD">:</span><span style="color:#98C379">"JWT"</span><span style="color:#ABB2BF">)</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">setHeaderParam</span><span style="color:#ABB2BF">(s</span><span style="color:#C678DD">:</span><span style="color:#98C379">"alg"</span><span style="color:#ABB2BF">,o</span><span style="color:#C678DD">:</span><span style="color:#98C379">"HS256"</span><span style="color:#ABB2BF">)</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">            //payload 设置用户tom 角色admin 主题admin-test 到期时间一天 设置jwtID</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">claim</span><span style="color:#ABB2BF">(s</span><span style="color:#C678DD">:</span><span style="color:#98C379">"username"</span><span style="color:#ABB2BF">,o</span><span style="color:#C678DD">:</span><span style="color:#98C379">"tom"</span><span style="color:#ABB2BF">)</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">claim</span><span style="color:#ABB2BF">(s</span><span style="color:#C678DD">:</span><span style="color:#98C379">"role"</span><span style="color:#ABB2BF">,o</span><span style="color:#C678DD">:</span><span style="color:#98C379">"admin"</span><span style="color:#ABB2BF">)</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">setSubject</span><span style="color:#ABB2BF">(</span><span style="color:#98C379">"admin-test"</span><span style="color:#ABB2BF">)</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">setExpiration</span><span style="color:#ABB2BF">(</span><span style="color:#C678DD">new</span><span style="color:#61AFEF"> Date</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">System</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">currentTimeMillis</span><span style="color:#ABB2BF">()</span><span style="color:#56B6C2">+</span><span style="color:#ABB2BF">time))</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">setId</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">UUID</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">randomUUID</span><span style="color:#ABB2BF">().</span><span style="color:#61AFEF">toString</span><span style="color:#ABB2BF">())</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">            //Signature 设置签名 添加算法和签名信息</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">signWith</span><span style="color:#ABB2BF">(signatureAlgorithm</span><span style="color:#C678DD">:</span><span style="color:#E5C07B">SignatureAlgorithm</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">HS256</span><span style="color:#ABB2BF">,key</span><span style="color:#C678DD">:</span><span style="color:#ABB2BF">signature)</span></span>
+<span class="line"><span style="color:#ABB2BF">            .</span><span style="color:#61AFEF">compact</span><span style="color:#ABB2BF">();</span><span style="color:#7F848E;font-style:italic">//用“.” 拼接三部分得到token字符串</span></span>
+<span class="line"><span style="color:#E5C07B">        System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(jwtToken);</span><span style="color:#7F848E;font-style:italic">//测试生成的token</span></span>
+<span class="line"><span style="color:#ABB2BF">        </span></span>
+<span class="line"><span style="color:#ABB2BF">    }</span></span>
+<span class="line"><span style="color:#E06C75">    </span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">    //对token进行解密</span></span>
+<span class="line"><span style="color:#E06C75">    </span></span>
+<span class="line"><span style="color:#ABB2BF">    @</span><span style="color:#E5C07B">org</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">junit</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">Test</span></span>
+<span class="line"><span style="color:#C678DD">    public</span><span style="color:#C678DD"> void</span><span style="color:#61AFEF"> parse</span><span style="color:#ABB2BF">(){</span></span>
+<span class="line"><span style="color:#E5C07B">		String</span><span style="color:#E06C75"> token</span><span style="color:#56B6C2"> =</span><span style="color:#98C379"> "生成的token"</span><span style="color:#ABB2BF">;</span></span>
+<span class="line"><span style="color:#E5C07B">        JwtParser</span><span style="color:#E06C75"> jwtParser</span><span style="color:#56B6C2"> =</span><span style="color:#E5C07B"> Jwts</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">parser</span><span style="color:#ABB2BF">();</span></span>
+<span class="line"><span style="color:#7F848E;font-style:italic">        //根据后端定义的签名信息进行解析，如果解析失败就说明token被修改，解析成功后生成一个类似集合的对象</span></span>
+<span class="line"><span style="color:#E5C07B">        Jws</span><span style="color:#ABB2BF">&lt;</span><span style="color:#E5C07B">Claims</span><span style="color:#ABB2BF">&gt; </span><span style="color:#E06C75">claimsJws</span><span style="color:#56B6C2"> =</span><span style="color:#E5C07B"> jwtParser</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">setSigningKey</span><span style="color:#ABB2BF">(signature).</span><span style="color:#61AFEF">parseClaimsJws</span><span style="color:#ABB2BF">(token);</span></span>
+<span class="line"><span style="color:#E5C07B">        Claims</span><span style="color:#E06C75"> claims</span><span style="color:#56B6C2"> =</span><span style="color:#E5C07B"> claimsJws</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">getBody</span><span style="color:#ABB2BF">();</span></span>
+<span class="line"><span style="color:#E5C07B">        System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">claims</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">get</span><span style="color:#ABB2BF">(</span><span style="color:#98C379">"username"</span><span style="color:#ABB2BF">));</span><span style="color:#7F848E;font-style:italic">//根据key查询取出</span></span>
+<span class="line"><span style="color:#E5C07B">    	System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">claims</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">get</span><span style="color:#ABB2BF">(</span><span style="color:#98C379">"role"</span><span style="color:#ABB2BF">));</span></span>
+<span class="line"><span style="color:#E5C07B">        System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">claims</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">getId</span><span style="color:#ABB2BF">());</span></span>
+<span class="line"><span style="color:#E5C07B">        System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">claims</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">getSubject</span><span style="color:#ABB2BF">());</span><span style="color:#7F848E;font-style:italic">//主题</span></span>
+<span class="line"><span style="color:#E5C07B">        System</span><span style="color:#ABB2BF">.</span><span style="color:#E5C07B">out</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">println</span><span style="color:#ABB2BF">(</span><span style="color:#E5C07B">claims</span><span style="color:#ABB2BF">.</span><span style="color:#61AFEF">getExpiration</span><span style="color:#ABB2BF">());</span><span style="color:#7F848E;font-style:italic">//有效期 </span></span>
+<span class="line"><span style="color:#ABB2BF">    }</span></span>
+<span class="line"><span style="color:#ABB2BF">}</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
     <item>
       <title>操作指南</title>
       <link>https://nulizongyouhuibao.space/zh/demo/use.html</link>
