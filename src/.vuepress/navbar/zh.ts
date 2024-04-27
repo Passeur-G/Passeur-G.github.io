@@ -215,6 +215,11 @@ export const zhNavbar = navbar([
         link: "HTML/",
       },
       {
+        text: "Nginx",
+        icon: "fab fa-neos",
+        link: "Nginx/",
+      },
+      {
         text: "相关内容集",
         icon: "fab fa-node",
         link: "NodeEles/",

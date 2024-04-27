@@ -217,6 +217,11 @@ export const enSidebar = sidebar({
           link: "FrontEnd/HTML/",
         },
         {
+          text: "Nginx",
+          icon: "fab fa-neos",
+          link: "FrontEnd/Nginx/",
+        },
+        {
           text: "相关内容集",
           icon: "fab fa-node",
           link: "FrontEnd/NodeEles/",
@@ -241,6 +246,8 @@ export const enSidebar = sidebar({
   "/posts/FrontEnd/CSS/": "structure",
   "/posts/FrontEnd/HTML/": "structure",
   "/posts/FrontEnd/JavaScript/": "structure",
+  "/posts/FrontEnd/Nginx/": "structure",
+  "/posts/FrontEnd/NodeEles/": "structure",
   "/posts/LearningNotes/Algorithm/": "structure",
   "/posts/LearningNotes/CommandMemo/": "structure",
   "/posts/LearningNotes/DataStructure/": "structure",

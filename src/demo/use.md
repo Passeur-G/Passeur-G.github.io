@@ -225,7 +225,7 @@ xxx;
 :::
 ---
 ```
-<BiliBili aid="xxxxxx" cid="xxxxx" ratio="xx:x" time="xx" page="x" />
+<BiliBili bvid="BV1Sz421Z7yD" ratio="16:9" time="60" page="1" />
 [BiliBili的文档](https://plugin-components.vuejs.press/zh/guide/media/bili-bili.html#%E6%A1%88%E4%BE%8B)
 
 [后续参考文档补充](https://theme-hope.vuejs.press/zh/guide/component/built-in.html#%E6%9D%82%E9%A1%B9)

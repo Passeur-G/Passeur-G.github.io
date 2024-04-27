@@ -1,15 +1,13 @@
 ---
-title: "Linux"
-icon: linux
-date: 1978-01-09
+title: Cookie的演化
+icon: fa-solid fa-cookie
+date: 2024-04-27
 timeline: false
-index: false
 article: false
 ---
-
-:::info
-这里放置 Linux 相关的内容
+::: important
+HTTP协议是`无状态`的协议。即对于事务处理没有记忆能力，每次客户端和服务端会话完成时，服务端不会保存任何会话信息:每个请求都是完全独立的，服务端无法确认当前访问者的身份信息，无法分辨上一次的请求发送者和这一次的发送者是不是同一个人。服务器与浏览器为了进行会话跟踪，维护一个登录状态，这个状态用于告诉服务端前后两个请求是否来自同一浏览器。实现这个状态就通过Cookie或Session、Token实现（核心概念---存储）
 :::
 
 
-<AutoCatalog />
+相关目录如下：

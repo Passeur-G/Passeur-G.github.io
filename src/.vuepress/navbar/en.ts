@@ -215,6 +215,11 @@ export const enNavbar = navbar([
         link: "HTML/",
       },
       {
+        text: "Nginx",
+        icon: "fab fa-neos",
+        link: "Nginx/",
+      },
+      {
         text: "Related content set",
         icon: "fab fa-node",
         link: "NodeEles/",
