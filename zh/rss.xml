@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/zh/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Apr 2024 14:39:52 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Apr 2024 14:39:52 GMT</lastBuildDate>
+    <pubDate>Sun, 28 Apr 2024 11:07:28 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Apr 2024 11:07:28 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <image>
@@ -24,16 +24,16 @@
     <category>使用指南</category>
     <category>指南</category>
     <item>
-      <title>反向代理</title>
+      <title>Nginx功能</title>
       <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</link>
       <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</guid>
-      <source url="https://nulizongyouhuibao.space/zh/rss.xml">反向代理</source>
-      <description>相关信息 这里放置 Nginx 相关的内容 深入理解反向代理 正向代理 : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址 正向代理和反向代理的区别：正向代理...</description>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">Nginx功能</source>
+      <description>相关信息 Nginx的反向代理、负载均衡和跨域 深入理解反向代理 正向代理 : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址 正向代理和反向代理的区别：正向...</description>
       <category>-Nginx</category>
       <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container info">
 <p class="hint-container-title">相关信息</p>
-<p>这里放置 Nginx 相关的内容</p>
+<p>Nginx的反向代理、负载均衡和跨域</p>
 </div>
 <h2>深入理解反向代理</h2>
 <p><code>正向代理</code> : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址</p>
@@ -76,11 +76,11 @@ http://www.123.com/index.html 调用 https://www.123.com/server.php （协议不
       <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</link>
       <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">Nginx配置</source>
-      <description>相关信息 这里放置 Nginx相关内容 Nginx的配置文件 如果worker数超过CPU核数，会导致进程之间来去竞争CPU资源，产生不必要的上下文切换 最大并发量等于 worker进程的个数乘以连接上限，如果是反向代理，那么最大并发量需要除以2（因为每个并发会建立与客户端的连接和与后台服务器的连接，占用两个连接） nginx详细参数配置(史上最全) ...</description>
+      <description>相关信息 Nginx的文件配置详解 Nginx的配置文件 如果worker数超过CPU核数，会导致进程之间来去竞争CPU资源，产生不必要的上下文切换 最大并发量等于 worker进程的个数乘以连接上限，如果是反向代理，那么最大并发量需要除以2（因为每个并发会建立与客户端的连接和与后台服务器的连接，占用两个连接） nginx详细参数配置(史上最全) - ...</description>
       <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container info">
 <p class="hint-container-title">相关信息</p>
-<p>这里放置 Nginx相关内容</p>
+<p>Nginx的文件配置详解</p>
 </div>
 <h2>Nginx的配置文件</h2>
 <div class="language-nginx line-numbers-mode" data-ext="nginx" data-title="nginx"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"><span style="color:#7F848E;font-style:italic"># 全局参数</span></span>
@@ -472,7 +472,7 @@ Session 诞生并且保存在服务器端，由服务器主导一切，优点：
 <span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   │</span><span style="color:#98C379">   └──</span><span style="color:#98C379"> theme.ts</span><span style="color:#7F848E;font-style:italic"> # 主题配置文件</span></span>
 <span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   ├──</span><span style="color:#98C379"> about.md</span><span style="color:#7F848E;font-style:italic"> #本站简介</span></span>
 <span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   ├──</span><span style="color:#98C379"> intro.md</span><span style="color:#7F848E;font-style:italic"> #个人简介</span></span>
-<span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   ├──</span><span style="color:#98C379"> Collection.md</span><span style="color:#7F848E;font-style:italic"> #工具集</span></span>
+<span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   ├──</span><span style="color:#98C379"> collection.md</span><span style="color:#7F848E;font-style:italic"> #工具集</span></span>
 <span class="line"><span style="color:#61AFEF">│</span><span style="color:#98C379">   └──</span><span style="color:#98C379"> README.md</span><span style="color:#7F848E;font-style:italic"> #</span></span>
 <span class="line"><span style="color:#61AFEF">└──</span><span style="color:#98C379"> tsconfig.json</span><span style="color:#7F848E;font-style:italic"> # 路径名转换</span></span>
 <span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2><div style="color:#9400D3">框架支持</div></h2>
