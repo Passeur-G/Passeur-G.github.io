@@ -4,7 +4,7 @@
       <div id="drinks-box-s" class="drinks-button left-100">
         <div id="drinks-icons" class="left-100 tr3">
           <div id="coffee-donate" class="icon-donate">
-            <span class="font-icon icon iconfont icon-hk-flutter"></span>
+            <span class="font-icon icon iconfont icon-spring"></span>
             赞助
           </div>
         </div>
