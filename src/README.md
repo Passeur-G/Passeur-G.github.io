@@ -11,12 +11,12 @@ projects:
   - icon: project
     name: Item collection
     desc: Open source project practice set
-    link: /Projects/
+    link: /projects/
 
   - icon: link
     name: Tool link
     desc: A collection of commonly used websites
-    link: /Collection
+    link: /collection
 
   - icon: book
     name: My bookcase

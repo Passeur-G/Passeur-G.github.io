@@ -1,5 +1,5 @@
 ---
-title: "反向代理"
+title: "Nginx功能"
 author: Passeur-高
 date: 2024-04-27
 star: true
@@ -13,7 +13,7 @@ article: true
 ---
 
 :::info
-这里放置 Nginx 相关的内容
+Nginx的反向代理、负载均衡和跨域
 :::
 
 

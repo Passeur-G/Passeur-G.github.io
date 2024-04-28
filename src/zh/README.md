@@ -11,12 +11,12 @@ projects:
   - icon: project
     name: 项目 合集
     desc: 开源项目练习集合
-    link: /Projects/
+    link: /projects/
 
   - icon: link
     name: 工具 链接
     desc: 一些常用的网站合集
-    link: /Collection
+    link: /collection
 
   - icon: book
     name: 我的 书柜

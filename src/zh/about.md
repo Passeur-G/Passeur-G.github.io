@@ -93,7 +93,7 @@ tag:
 │   │   └── theme.ts # 主题配置文件
 │   ├── about.md #本站简介
 │   ├── intro.md #个人简介
-│   ├── Collection.md #工具集
+│   ├── collection.md #工具集
 │   └── README.md #
 └── tsconfig.json # 路径名转换
 ```

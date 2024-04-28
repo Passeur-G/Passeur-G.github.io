@@ -6,7 +6,7 @@ article: true
 ---
 
 :::info
-这里放置 Nginx相关内容
+Nginx的文件配置详解
 :::
 
 ## Nginx的配置文件

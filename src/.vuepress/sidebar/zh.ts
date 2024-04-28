@@ -18,27 +18,27 @@ export const zhSidebar = sidebar({
         { 
           text: "Eclipse", 
           icon: "fa-solid fa-e", 
-          link: "DevelopmentKit/Eclipse/" 
+          link: "developmentkit/eclipse/" 
         },
         { 
           text: "Idea", 
           icon: "fa-solid fa-i", 
-          link: "DevelopmentKit/Idea/" 
+          link: "developmentkit/idea/" 
         },
         { 
           text: "VScode", 
           icon: "fa-solid fa-code", 
-          link: "DevelopmentKit/VScode/" 
+          link: "developmentkit/vscode/" 
         },
         {     
           text: "PowerDesigner", 
           icon: "fa-solid fa-database", 
-          link: "Database/PowerDesigner/" 
+          link: "database/powerdesigner/" 
         },
         { 
           text: "VMware", 
           icon: "fa-solid fa-v", 
-          link: "Database/VMware/" 
+          link: "database/vmware/" 
         },
         { 
           text: "蓝奏云", 
@@ -54,177 +54,177 @@ export const zhSidebar = sidebar({
         { 
           text: "编码规范", 
           icon: "fa-solid fa-scroll", 
-          link: "OtherTutorials/encoding/"  
+          link: "othertutorials/encoding/"  
         },
         { 
           text: "Over Wall", 
           icon: "fa-solid fa-joint", 
-          link: "OtherTutorials/OverWall/" 
+          link: "othertutorials/overwall/" 
         },
         { 
           text: "记笔记", 
           icon: "fa-solid fa-t", 
-          link: "OtherTutorials/Note/" 
+          link: "othertutorials/note/" 
         },
         { 
           text: "Java", 
           icon: "fab fa-java", 
-          link: "LearningNotes/Java/" 
+          link: "learningnotes/java/" 
         },
         { 
           text: "Python", 
           icon: "fab fa-python", 
-          link: "LearningNotes/Python/" 
+          link: "learningnotes/python/" 
         },
         { 
           text: "Go", 
           icon: "fab fa-golang", 
-          link: "LearningNotes/Go/" 
+          link: "learningnotes/go/" 
         },
         {
           text: "计算机组成原理",
           icon: "fa-solid fa-desktop",
-          link: "LearningNotes/principles/",
+          link: "learningnotes/principles/",
         },
         {
           text: "数据结构",
           icon: "fa-solid fa-cubes-stacked",
-          link: "LearningNotes/DataStructure/",
+          link: "learningnotes/datastructure/",
         },
         {
           text: "计算机网络",
           icon: "fab fa-internet-explorer",
-          link: "LearningNotes/Networks/",
+          link: "learningnotes/networks/",
         },
         {
           text: "操作系统",
           icon: "fa-solid fa-microchip",
-          link: "LearningNotes/System/",
+          link: "learningnotes/system/",
         },
         { 
           text: "算法笔记", 
           icon: "fa-solid fa-chart-bar", 
-          link: "LearningNotes/Algorithm/" 
+          link: "learningnotes/algorithm/" 
         },
         { 
           text: "常用命令备忘录", 
           icon: "fa-solid fa-book-bookmark", 
-          link: "LearningNotes/CommandMemo/" 
+          link: "learningnotes/commandmemo/" 
         },
         { 
           text: "Liunx", 
           icon: "iconfont icon-liunx-", 
-          link: "LearningNotes/liunx/" 
+          link: "learningnotes/liunx/" 
         },
         { 
           text: "Maven", 
           icon: "iconfont icon-maven", 
-          link: "ToolSet/Maven/" 
+          link: "toolset/maven/" 
         },
         { 
           text: "Git", 
           icon: "fab fa-git-alt", 
-          link: "ToolSet/Git/" 
+          link: "toolset/git/" 
         },
         { 
           text: "Postman", 
           icon: "iconfont icon-postman", 
-          link: "ToolSet/Postman/" 
+          link: "toolset/postman/" 
         },
         { 
           text: "Docker", 
           icon: "fab fa-docker", 
-          link: "ToolSet/Docker/" 
+          link: "toolset/docker/" 
         },
         { 
           text: "GitHub", 
           icon: "fa-solid fa-code-branch", 
-          link: "ToolSet/Github/" 
+          link: "toolset/github/" 
         },
         { 
           text: "Navicat", 
           icon: "iconfont icon-navicat", 
-          link: "ToolSet/Navicat/" 
+          link: "toolset/navicat/" 
         },
         { 
           text: "Redis", 
           icon: "iconfont icon-Redis", 
-          link: "ToolSet/Redis/" 
+          link: "toolset/redis/" 
         },
         { 
           text: "MySQL", 
           icon: "iconfont icon-mysql-copy", 
-          link: "ToolSet/MySQL/" 
+          link: "toolset/mysql/" 
         },
         { 
           text: "React", 
           icon: "fab fa-react", 
-          link: "FrameSet/React/" 
+          link: "frameset/react/" 
         },
         { 
           text: "Vue", 
           icon: "fab fa-vuejs", 
-          link: "FrameSet/Vue/" 
+          link: "frameset/vue/" 
         },
         { 
           text: "Mybatis", 
           icon: "iconfont icon-mybatis", 
-          link: "FrameSet/Mybatis/" 
+          link: "frameset/mybatis/" 
         },
         { 
           text: "MybatisPlus", 
           icon: "iconfont icon-mybatisplus", 
-          link: "FrameSet/MybatisPlus/" 
+          link: "frameset/mybatisplus/" 
         },
         { 
           text: "微信小程序",
           icon: "fab fa-weixin",
-          link: "FrameSet/Wechat/", 
+          link: "frameset/wechat/", 
         },
         {
           text: "Spring",
           icon: "iconfont icon-spring",
-          link: "SpringAll/Spring/",
+          link: "springall/spring/",
         },
         {
           text: "SpringBoot",
           icon: "iconfont icon-SpringBoot",
-          link: "SpringAll/SpringBoot/",
+          link: "springall/springboot/",
         },
         {
           text: "SpringCloud",
           icon: "iconfont icon-SpringCloud",
-          link: "SpringAll/SpringCloud/",
+          link: "springall/springcloud/",
         },
         {
           text: "SpringMVC",
           icon: "iconfont icon-spring_",
-          link: "SpringAll/SpringMVC/",
+          link: "springall/springmvc/",
         },
         {
           text: "CSS",
           icon: "fab fa-css3-alt",
-          link: "FrontEnd/CSS/",
+          link: "frontend/css/",
         },
         {
           text: "JavaScript",
           icon: "fab fa-js",
-          link: "FrontEnd/JavaScript/",
+          link: "frontend/javascript/",
         },
         {
           text: "HTML",
           icon: "fab fa-html5",
-          link: "FrontEnd/HTML/",
+          link: "frontend/html/",
         },
         {
           text: "Nginx",
           icon: "fab fa-neos",
-          link: "FrontEnd/Nginx/",
+          link: "frontend/nginx/",
         },
         {
           text: "相关内容集",
           icon: "fab fa-node",
-          link: "FrontEnd/NodeEles/",
+          link: "frontend/nodeeles/",
         },
       ],
     },
@@ -235,42 +235,42 @@ export const zhSidebar = sidebar({
       link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
     },
   ],
-  "/zh/posts/Database/": "structure",
-  "/zh/posts/DevelopmentKit/Eclipse/": "structure",
-  "/zh/posts/DevelopmentKit/Idea/": "structure",
-  "/zh/posts/DevelopmentKit/VScode/": "structure",
-  "/zh/posts/FrameSet/Mybatis/": "structure",
-  "/zh/posts/FrameSet/MybatisPlus/": "structure",
-  "/zh/posts/FrameSet/React/": "structure",
-  "/zh/posts/FrameSet/Vue/": "structure",
-  "/zh/posts/FrontEnd/CSS/": "structure",
-  "/zh/posts/FrontEnd/HTML/": "structure",
-  "/zh/posts/FrontEnd/JavaScript/": "structure",
-  "/zh/posts/FrontEnd/Nginx/": "structure",
-  "/zh/posts/FrontEnd/NodeEles/": "structure",
-  "/zh/posts/LearningNotes/Algorithm/": "structure",
-  "/zh/posts/LearningNotes/CommandMemo/": "structure",
-  "/zh/posts/LearningNotes/DataStructure/": "structure",
-  "/zh/posts/LearningNotes/Go/": "structure",
-  "/zh/posts/LearningNotes/Java/": "structure",
-  "/zh/posts/LearningNotes/liunx/": "structure",
-  "/zh/posts/LearningNotes/Networks/": "structure",
-  "/zh/posts/LearningNotes/principles/": "structure",
-  "/zh/posts/LearningNotes/Python/": "structure",
-  "/zh/posts/LearningNotes/System/": "structure",
-  "/zh/posts/OtherTutorials/": "structure",
-  "/zh/posts/SpringAll/Spring/": "structure",
-  "/zh/posts/SpringAll/SpringBoot/": "structure",
-  "/zh/posts/SpringAll/SpringCloud/": "structure",
-  "/zh/posts/SpringAll/SpringMVC/": "structure",
-  "/zh/posts/ToolSet/Docker/": "structure",
-  "/zh/posts/ToolSet/Git/": "structure",
-  "/zh/posts/ToolSet/Github/": "structure",
-  "/zh/posts/ToolSet/Maven/": "structure",
-  "/zh/posts/ToolSet/MySQL/": "structure",
-  "/zh/posts/ToolSet/Navicat/": "structure",
-  "/zh/posts/ToolSet/Postman/": "structure",
-  "/zh/posts/OtherTutorials/encoding/": "structure",
-  "/zh/posts/OtherTutorials/Note/": "structure",
-  "/zh/posts/OtherTutorials/OverWall/": "structure",
+  "/zh/posts/database/": "structure",
+  "/zh/posts/developmentkit/eclipse/": "structure",
+  "/zh/posts/developmentkit/idea/": "structure",
+  "/zh/posts/developmentkit/vscode/": "structure",
+  "/zh/posts/frameset/mybatis/": "structure",
+  "/zh/posts/frameset/mybatisplus/": "structure",
+  "/zh/posts/frameset/react/": "structure",
+  "/zh/posts/frameset/vue/": "structure",
+  "/zh/posts/frontend/css/": "structure",
+  "/zh/posts/frontend/html/": "structure",
+  "/zh/posts/frontend/javascript/": "structure",
+  "/zh/posts/frontend/nginx/": "structure",
+  "/zh/posts/frontend/nodeeles/": "structure",
+  "/zh/posts/learningnotes/algorithm/": "structure",
+  "/zh/posts/learningnotes/commandmemo/": "structure",
+  "/zh/posts/learningnotes/datastructure/": "structure",
+  "/zh/posts/learningnotes/go/": "structure",
+  "/zh/posts/learningnotes/java/": "structure",
+  "/zh/posts/learningnotes/liunx/": "structure",
+  "/zh/posts/learningnotes/networks/": "structure",
+  "/zh/posts/learningnotes/principles/": "structure",
+  "/zh/posts/learningnotes/python/": "structure",
+  "/zh/posts/learningnotes/system/": "structure",
+  "/zh/posts/othertutorials/": "structure",
+  "/zh/posts/springall/spring/": "structure",
+  "/zh/posts/springall/springboot/": "structure",
+  "/zh/posts/springall/springcloud/": "structure",
+  "/zh/posts/springall/springmvc/": "structure",
+  "/zh/posts/toolset/docker/": "structure",
+  "/zh/posts/toolset/git/": "structure",
+  "/zh/posts/toolset/github/": "structure",
+  "/zh/posts/toolset/maven/": "structure",
+  "/zh/posts/toolset/mysql/": "structure",
+  "/zh/posts/toolset/navicat/": "structure",
+  "/zh/posts/toolset/postman/": "structure",
+  "/zh/posts/othertutorials/encoding/": "structure",
+  "/zh/posts/othertutorials/note/": "structure",
+  "/zh/posts/othertutorials/overwall/": "structure",
 });

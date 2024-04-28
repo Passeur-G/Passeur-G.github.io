@@ -18,4 +18,8 @@ article: false
 > Nginx 最初由 Igor Sysoev 编写，长期以来一直在许多俄罗斯高负载网站上运行，包括 Yandex、Mail.Ru、VK 和 Rambler。根据 Netcraft 的数据，截至 2024 年 3 月，Nginx 服务或代理了全球最繁忙的网站中的 20.63%
 >总之，Nginx 是一个高性能、轻量级且功能丰富的服务器，适用于 Web 服务、反向代理、内容缓存、负载均衡、媒体流传输等多种场景。
 
-相关目录如下
+相关目录如下：
+
+[Nginx的配置](/posts/FrontEnd/Nginx/NginxSet.md)
+
+[反向代理和负载均衡](/posts/FrontEnd/Nginx/NginxNote.md)

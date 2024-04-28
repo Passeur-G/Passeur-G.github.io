@@ -8,19 +8,19 @@ export const enNavbar = navbar([
     children: [
       {
         text: "development kit",
-        prefix:"/posts/DevelopmentKit/",
+        prefix:"/posts/developmentkit/",
         children: [
-          { text: "Eclipse", icon: "fa-solid fa-e", link: "Eclipse/" },
-          { text: "Idea", icon: "fa-solid fa-i", link: "Idea/" },
-          { text: "VScode", icon: "fa-solid fa-code", link: "VScode/" },
+          { text: "Eclipse", icon: "fa-solid fa-e", link: "eclipse/" },
+          { text: "Idea", icon: "fa-solid fa-i", link: "idea/" },
+          { text: "VScode", icon: "fa-solid fa-code", link: "vscode/" },
         ],
       },
       {
-        text: "Database/virtual",
-        prefix:"/posts/Database/",
+        text: "database/virtual",
+        prefix:"/posts/database/",
         children: [
-          { text: "PowerDesigner", icon: "fa-solid fa-database", link: "PowerDesigner/" },
-          { text: "VMware", icon: "fa-solid fa-v", link: "VMware/" },
+          { text: "PowerDesigner", icon: "fa-solid fa-database", link: "powerdesigner/" },
+          { text: "VMware", icon: "fa-solid fa-v", link: "vmware/" },
         ],
       },
       {
@@ -32,11 +32,11 @@ export const enNavbar = navbar([
       },
       {
         text: "Other tutorials",
-        prefix:"/posts/OtherTutorials/",
+        prefix:"/posts/othertutorials/",
         children: [
           { text: "encoding specification", icon: "fa-solid fa-scroll", link: "encoding/"  },
-          { text: "Over Wall", icon: "fa-solid fa-joint", link: "OverWall/" },
-          { text: "Note", icon: "fa-solid fa-t", link: "Note/" },
+          { text: "Over Wall", icon: "fa-solid fa-joint", link: "overwall/" },
+          { text: "Note", icon: "fa-solid fa-t", link: "note/" },
         ],
       },
     ],
@@ -44,14 +44,14 @@ export const enNavbar = navbar([
   {
     text: "learning notes",
     icon: "iconfont icon-Notes",
-    prefix: "/posts/LearningNotes/",
+    prefix: "/posts/learningnotes/",
     children: [
       {
         text: "programming language",
         children: [
-          { text: "Java", icon: "fab fa-java", link: "Java/" },
-          { text: "Python", icon: "fab fa-python", link: "Python/" },
-          { text: "Go", icon: "fab fa-golang", link: "Go/" },
+          { text: "Java", icon: "fab fa-java", link: "java/" },
+          { text: "Python", icon: "fab fa-python", link: "python/" },
+          { text: "Go", icon: "fab fa-golang", link: "go/" },
         ],
       },
       {
@@ -65,17 +65,17 @@ export const enNavbar = navbar([
           {
             text: "data structure",
             icon: "fa-solid fa-cubes-stacked",
-            link: "DataStructure/",
+            link: "datastructure/",
           },
           {
             text: "computer networks",
             icon: "fab fa-internet-explorer",
-            link: "Networks/",
+            link: "networks/",
           },
           {
             text: "operating system",
             icon: "fa-solid fa-microchip",
-            link: "System/",
+            link: "system/",
           },
         ],
       },
@@ -85,12 +85,12 @@ export const enNavbar = navbar([
           { 
             text: "Algorithm note", 
             icon: "fa-solid fa-chart-bar", 
-            link: "Algorithm/" 
+            link: "algorithm/" 
           },
           { 
             text: "Common command memo", 
             icon: "fa-solid fa-book-bookmark", 
-            link: "CommandMemo/" 
+            link: "commandmemo/" 
           },
           { 
             text: "Liunx", 
@@ -104,34 +104,34 @@ export const enNavbar = navbar([
   {
     text: "Tool set",
     icon: "fa-solid fa-wrench",
-    prefix: "/posts/ToolSet/",
+    prefix: "/posts/toolset/",
     children: [
       {
         text: "Warehouse configuration",
         children: [
-          { text: "Maven", icon: "iconfont icon-maven", link: "Maven/" },
-          { text: "Git", icon: "fab fa-git-alt", link: "Git/" },
+          { text: "Maven", icon: "iconfont icon-maven", link: "maven/" },
+          { text: "Git", icon: "fab fa-git-alt", link: "git/" },
         ],
       },
       {
         text: "request for test",
         children: [
-          { text: "Postman", icon: "iconfont icon-postman", link: "Postman/" },
+          { text: "Postman", icon: "iconfont icon-postman", link: "postman/" },
         ],
       },
       {
         text: "Deployment tool",
         children: [
-          { text: "Docker", icon: "fab fa-docker", link: "Docker/" },
-          { text: "GitHub", icon: "fa-solid fa-code-branch", link: "Github/" },
+          { text: "Docker", icon: "fab fa-docker", link: "docker/" },
+          { text: "GitHub", icon: "fa-solid fa-code-branch", link: "github/" },
         ],
       },
       {
         text: "data base tool",
         children: [
-          { text: "Navicat", icon: "iconfont icon-navicat", link: "Navicat/" },
-          { text: "Redis", icon: "iconfont icon-Redis", link: "Redis/" },
-          { text: "MySQL", icon: "iconfont icon-mysql-copy", link: "MySQL/" },
+          { text: "Navicat", icon: "iconfont icon-navicat", link: "navicat/" },
+          { text: "Redis", icon: "iconfont icon-Redis", link: "redis/" },
+          { text: "MySQL", icon: "iconfont icon-mysql-copy", link: "mysql/" },
         ],
       },
     ],
@@ -139,20 +139,20 @@ export const enNavbar = navbar([
   {
     text: "Frame set",
     icon: "fa-solid fa-boxes-packing",
-    prefix: "/posts/FrameSet/",
+    prefix: "/posts/frameset/",
     children: [
       {
         text: "Front-end frame",
         children: [
-          { text: "React", icon: "fab fa-react", link: "React/" },
-          { text: "Vue", icon: "fab fa-vuejs", link: "Vue/" },
+          { text: "React", icon: "fab fa-react", link: "react/" },
+          { text: "Vue", icon: "fab fa-vuejs", link: "vue/" },
         ],
       },
       {
         text: "ORM framework",
         children: [
-          { text: "Mybatis", icon: "iconfont icon-mybatis", link: "Mybatis/" },
-          { text: "MybatisPlus", icon: "iconfont icon-mybatisplus", link: "MybatisPlus/" },
+          { text: "Mybatis", icon: "iconfont icon-mybatis", link: "mybatis/" },
+          { text: "MybatisPlus", icon: "iconfont icon-mybatisplus", link: "mybatisplus/" },
         ],
       },
       { 
@@ -161,7 +161,7 @@ export const enNavbar = navbar([
           { 
             text: "WeChat Mini Program",
             icon: "fab fa-weixin",
-            link: "Wechat/", 
+            link: "wechat/", 
           },
         ],
       },
@@ -170,59 +170,59 @@ export const enNavbar = navbar([
   {
     text: "Sping family bucket",
     icon: "iconfont icon-spring",
-    prefix: "/posts/SpringAll/",
+    prefix: "/posts/springall/",
     children: [
       {
         text: "Spring",
         icon: "iconfont icon-spring",
-        link: "Spring/",
+        link: "spring/",
       },
       {
         text: "SpringBoot",
         icon: "iconfont icon-SpringBoot",
-        link: "SpringBoot/",
+        link: "springboot/",
       },
       {
         text: "SpringCloud",
         icon: "iconfont icon-SpringCloud",
-        link: "SpringCloud/",
+        link: "springcloud/",
       },
       {
         text: "SpringMVC",
         icon: "iconfont icon-spring_",
-        link: "SpringMVC/",
+        link: "springmvc/",
       },
     ],
   },
   {
     text: "Front-end knowledge set",
     icon: "fab fa-grav",
-    prefix: "/posts/FrontEnd/",
+    prefix: "/posts/frontend/",
     children: [
       {
         text: "CSS",
         icon: "fab fa-css3-alt",
-        link: "CSS/",
+        link: "css/",
       },
       {
         text: "JavaScript",
         icon: "fab fa-js",
-        link: "JavaScript/",
+        link: "javascript/",
       },
       {
         text: "HTML",
         icon: "fab fa-html5",
-        link: "HTML/",
+        link: "html/",
       },
       {
         text: "Nginx",
         icon: "fab fa-neos",
-        link: "Nginx/",
+        link: "nginx/",
       },
       {
         text: "Related content set",
         icon: "fab fa-node",
-        link: "NodeEles/",
+        link: "nodeeles/",
       },
       
     ],
