@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/zh/</link>
     <description></description>
     <language>zh-CN</language>
-    <pubDate>Sun, 28 Apr 2024 12:58:02 GMT</pubDate>
-    <lastBuildDate>Sun, 28 Apr 2024 12:58:02 GMT</lastBuildDate>
+    <pubDate>Sun, 28 Apr 2024 15:02:50 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Apr 2024 15:02:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <image>
@@ -24,9 +24,20 @@
     <category>使用指南</category>
     <category>指南</category>
     <item>
+      <title>常用网站资源合集</title>
+      <link>https://nulizongyouhuibao.space/zh/collection.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/collection.html</guid>
+      <source url="https://nulizongyouhuibao.space/zh/rss.xml">常用网站资源合集</source>
+      <description>常用网站资源合集 1. 大模型工具</description>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>1.  大模型工具</h2>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Nginx功能</title>
-      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</link>
-      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxNote.html</guid>
+      <link>https://nulizongyouhuibao.space/zh/posts/frontend/nginx/nginxnote.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/frontend/nginx/nginxnote.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">Nginx功能</source>
       <description>相关信息 Nginx的反向代理、负载均衡和跨域 深入理解反向代理 正向代理 : 以VPN为例，客户端把网页请求，代理到一个可以访问应用服务器的代理服务器上，应用服务器响应代理服务器的请求，代理服务器把响应到的网页内容转发给客户端，而应用服务器不知道客户端的ip地址，而客户端既知道代理服务器的ip地址也知道应用服务器的地址 正向代理和反向代理的区别：正向...</description>
       <category>-Nginx</category>
@@ -73,8 +84,8 @@ http://www.123.com/index.html 调用 https://www.123.com/server.php （协议不
     </item>
     <item>
       <title>Nginx配置</title>
-      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</link>
-      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/Nginx/NginxSet.html</guid>
+      <link>https://nulizongyouhuibao.space/zh/posts/frontend/nginx/nginxset.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/frontend/nginx/nginxset.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">Nginx配置</source>
       <description>相关信息 Nginx的文件配置详解 Nginx的配置文件 如果worker数超过CPU核数，会导致进程之间来去竞争CPU资源，产生不必要的上下文切换 最大并发量等于 worker进程的个数乘以连接上限，如果是反向代理，那么最大并发量需要除以2（因为每个并发会建立与客户端的连接和与后台服务器的连接，占用两个连接） nginx详细参数配置(史上最全) - ...</description>
       <pubDate>Sat, 27 Apr 2024 00:00:00 GMT</pubDate>
@@ -218,8 +229,8 @@ http://www.123.com/index.html 调用 https://www.123.com/server.php （协议不
     </item>
     <item>
       <title>Token、Session</title>
-      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/CookieEles.html</link>
-      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/CookieEles.html</guid>
+      <link>https://nulizongyouhuibao.space/zh/posts/frontend/nodeeles/cookieeles.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/frontend/nodeeles/cookieeles.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">Token、Session</source>
       <description>Cookie的定义： 实现HTTP请求每次都自动带数据给服务器 Cookie就是一种存储在浏览器的数据 Cookie 存储在客户端,Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。 Cookie的基本流程如下： 用户在客户端输入账号密码并发送请求 ——&amp;gt; 服务端识别通过后，...</description>
       <category>-Cookie</category>
@@ -283,8 +294,8 @@ Session 诞生并且保存在服务器端，由服务器主导一切，优点：
     </item>
     <item>
       <title>JWT的使用</title>
-      <link>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/JWT.html</link>
-      <guid>https://nulizongyouhuibao.space/zh/posts/FrontEnd/NodeEles/JWT.html</guid>
+      <link>https://nulizongyouhuibao.space/zh/posts/frontend/nodeeles/jwt.html</link>
+      <guid>https://nulizongyouhuibao.space/zh/posts/frontend/nodeeles/jwt.html</guid>
       <source url="https://nulizongyouhuibao.space/zh/rss.xml">JWT的使用</source>
       <description>视频链接：JWT快速入门 依赖设置</description>
       <category>-Token</category>
@@ -382,17 +393,6 @@ Session 诞生并且保存在服务器端，由服务器主导一切，优点：
 对于各类Frontmatter设置如下：</p>
 <div class="language-markdown line-numbers-mode" data-ext="md" data-title="md"><pre class="shiki one-dark-pro" style="background-color:#282c34;color:#abb2bf" tabindex="0"><code><span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true"></div></div>]]></content:encoded>
       <enclosure url="https://nulizongyouhuibao.space/photo/bg7.jpeg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>常用网站资源合集</title>
-      <link>https://nulizongyouhuibao.space/zh/Collection.html</link>
-      <guid>https://nulizongyouhuibao.space/zh/Collection.html</guid>
-      <source url="https://nulizongyouhuibao.space/zh/rss.xml">常用网站资源合集</source>
-      <description>常用网站资源合集 1. 大模型工具</description>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>1.  大模型工具</h2>
-]]></content:encoded>
     </item>
     <item>
       <title>关于本站</title>
