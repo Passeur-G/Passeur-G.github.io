@@ -6,8 +6,8 @@
     <link>https://nulizongyouhuibao.space/</link>
     <description></description>
     <language>en-US</language>
-    <pubDate>Sun, 28 Apr 2024 12:05:29 GMT</pubDate>
-    <lastBuildDate>Sun, 28 Apr 2024 12:05:29 GMT</lastBuildDate>
+    <pubDate>Sun, 28 Apr 2024 12:58:02 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Apr 2024 12:58:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>Copyright © 2024 - present Passeur</copyright>
@@ -23,6 +23,17 @@
     <category>Blog</category>
     <category>个人简介</category>
     <category>Guide</category>
+    <item>
+      <title>常用网站资源合集</title>
+      <link>https://nulizongyouhuibao.space/collection.html</link>
+      <guid>https://nulizongyouhuibao.space/collection.html</guid>
+      <source url="https://nulizongyouhuibao.space/rss.xml">常用网站资源合集</source>
+      <description>常用网站资源合集 1. 大模型工具</description>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>1.  大模型工具</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>Nginx功能</title>
       <link>https://nulizongyouhuibao.space/posts/FrontEnd/Nginx/NginxNote.html</link>
@@ -525,17 +536,6 @@ Session 诞生并且保存在服务器端，由服务器主导一切，优点：
 <p><a href="https://oragekk.me/" target="_blank" rel="noopener noreferrer">黄 坤@Oragekk</a>,<a href="https://tech.dongcp.top/" target="_blank" rel="noopener noreferrer">Chengpeng Dong</a>,<a href="https://mister-hope.com/" target="_blank" rel="noopener noreferrer">Mr.Hope@主题作者</a></p>
 <div style="color:#EE7600">对如上作者表示感谢，本站的建成是参照如上作者的博客以及文档的参阅</div>
 <div style="color:#EE7600">感谢你的停留，谢谢你的倾听，我只是互联网上的一朵碎碎叨叨的小浪花。</div></blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>常用网站资源合集</title>
-      <link>https://nulizongyouhuibao.space/Collection.html</link>
-      <guid>https://nulizongyouhuibao.space/Collection.html</guid>
-      <source url="https://nulizongyouhuibao.space/rss.xml">常用网站资源合集</source>
-      <description>常用网站资源合集 1. 大模型工具</description>
-      <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>1.  大模型工具</h2>
 ]]></content:encoded>
     </item>
     <item>
